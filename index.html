@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="#">
+        <title>Project Letterkenny</title>
+    </head>
+    <body>
+        <!-- Site Wide Header -->
+		<header role="banner" aria-label="site-wide-navigation" class="site-header">
+			<div class="container">
+				<nav role="navigation" aria-label="navigation" class="site-header-nav">
+					<ul class="site-nav-left">
+						<li>
+							<a href="#">
+								<img src="#" alt="Project Logo" class="logo" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="site-nav-link">Query Categories</a>
+						</li>
+						<li>
+							<a href="#" class="site-nav-link active">Previous Queries</a>
+						</li>
+					</ul>
+					<ul class="site-nav-right">
+						<li>
+							<a href="#" class="site-nav-link" aria-label="site-wide-search-button" role="button">
+								<img src="#" alt="Search" />
+							</a>
+						</li>
+						<li>
+							<a href="#" class="button button-secondary button-small site-nav-link">Login</a>
+						</li>
+					</ul>
+					<ul class="site-nav-mobile">
+						<li>
+							<a href="#" class="button button-secondary button-small site-nav-link">Menu</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+        		<!-- Site Main Content -->
+		<main role="main" class="site-main">
+			<header aria-labelledby="page-title" class="clearfix site-main-header">
+				<div class="container">
+					<h1 id="page-title">Query Details</h1>
+					<p>Please enter your query information below. All fields are required.</p>
+				</div>
+			</header>
+			<section role="region" aria-label="query-form" class="site-main-section">
+				<div class="container">
+					<div class="card query-form-container">
+						<div class="clearfix">
+							<div class="col-left col-1-2">
+								<figure class="alert alert-error">
+									<div class="alert-content">
+										<img src="#" alt="Help indicator" />
+										<p>Looks like your forgot to add query details!</p>
+									</div>
+								</figure>
+								<h2 class="section-header">Query Details</h2>
+								<form role="form" class="clearfix">
+									<fieldset>
+										<label for="hashtag">Hashtags & Search Terms</label>
+										<input type="text" placeholder="Hashtag" class=" col-1-2" id="hashtag" />
+										<input type="text" placeholder="Search Terms" class="col-1-2" id="search_terms"/>
+                                        <label class="col-1-2" for="profilename">Profile Name</label>
+										<input type="profile_name" class="col-1-2" id="profile_name" />
+										<label for="date_from">Date From</label>
+										<input type="date" class="col-1-2" id="date"/>
+                                        <label for="date_to">Date To</label>
+                                        <input type="date" class="col-1-2" id="date" />
+									</fieldset>
+								</form>
+									<input type="submit" value="Query" class="button button-primary float-right" />
+							</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="site-main-background" arai-hidden="true"></div>
+		</main>
+        <!-- Site Wide Footer -->
+		<footer role="contentinfo" class="footer">
+			<div class="container">
+				<nav role="navigation" class="clearfix">
+					<ul class="col-1-4 footer-section">
+						<li>
+							<img src="#" alt="Citrus" class="logo" />
+						</li>
+						<li>
+							<p><smalL>All Rights Reserved | &copy; <time>2022</time></smalL></p>
+						</li>
+					</ul>
+					<div class="col-1-4 footer-section" aria-labelledby="product-pages">
+						<p id="product-pages"><b>About</b></p>
+						<ul>
+							<li>
+								<a href="#">Features</a>
+							</li>
+							<li>
+								<a href="#">Pricing</a>
+							</li>
+							<li>
+								<a href="#">Schedule Demo</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-1-4 footer-section" aria-labelledby="support-pages">
+						<p id="support-pages"><b>Support</b></p>
+						<ul>
+							<li>
+								<a href="#">FAQ</a>
+							</li>
+							<li>
+								<a href="#">Documentation</a>
+							</li>
+							<li>
+								<a href="#">API Status</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-1-4 footer-section" arai-labelledby="social-links">
+						<p id="support-pages"><b>Stay Up To Date</b></p>
+						<form role="form">
+							<input type="email" placeholder="Your email address" class="footer-email-input">
+							<input type="submit" value="Submit" class="button button-primary footer-email-button"/>
+						</form>
+					</div>
+				</nav>
+			</div>
+		</footer>
+    </body>
+</html>
