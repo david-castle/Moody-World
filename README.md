@@ -1,4 +1,4 @@
-# scrape_visualize
+# MoodyWorld
 A project to scrape data of interest from openly available sites for analysis anc visualization. 
 
 The code in the files creates a website interface to initiate scraping news articles from NBC, Fox and The Guardian news outets. Since no APIs are being used, the code first selects all tagged headlines and links of interest on the main site, as well as select subsites of the different outlets. After taking the links and headlines and putting them into a pandas dataframe, the code then follows the links to get the article text. 
