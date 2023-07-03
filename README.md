@@ -7,16 +7,15 @@ The text is then further processed using the spaCy library to tokenize the text,
 Based on the sentiment score, the markers appear in a 10 step gradient of colors ranging from red to green. 
 
 ## Requirements
-While the requirements file shows all necessary packages for this project, most will be automatically installed when installing the following core packages using pip:
-  pip install beautifulsoup4
-  pip install Flask
-  pip install Flask-WTF
-  pip install glob2
-  pip install pandas
-  pip install requests
-  pip install spacy
-  pip install vader-sentiment
+While the requirements file shows all necessary packages for this project, most will be automatically installed when installing the following core packages using pip: <br>
+- pip install beautifulsoup4<br>
+- pip install Flask<br>
+- pip install Flask-WTF<br>
+- pip install glob2<br>
+- pip install pandas<br>
+- pip install requests<br>
+- pip install spacy<br>
+- pip install vader-sentiment<br>
 
 
-Additionally, spacy will need a language model to do its job, which can be found here:
-  en-core-web-lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.5.0/en_core_web_lg-3.5.0-py3-none-any.whl
+Additionally, spacy will need the en-core-web-lg language model to do its job, which can be found [here](https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.5.0/en_core_web_lg-3.5.0-py3-none-any.whl).
