@@ -1,7 +1,7 @@
 import os
 from datetime import datetime
 from app import app, model_fox, model_guardian, model_nbc, model_processing
-from app.forms import QueryEditForm
+from app.forms import LoginForm, QueryEditForm
 from flask import (Flask, flash, redirect, render_template, request, url_for)
 
 
@@ -13,6 +13,11 @@ def home():
 @app.route("/about")
 def about():
   return render_template("about.html")
+
+@app.route('/login')
+def login():
+    form = LoginForm()
+    return render_template('login.html', title='Sign In', form=form)
 
 @app.route("/results", methods=["GET", "POST"])
 def results():
