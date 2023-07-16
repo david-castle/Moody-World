@@ -24,10 +24,25 @@
         <span class="navbar-item">
           <a class="button is-link" href="{{ url_for('results') }}">Results</a>
         </span>
+        <span class="navbar-item">
+          {% if current_user.is_anonymous %}
+          <a class="button is-link" href="{{ url_for('login') }}">Login</a>
+          {% else %}
+          <a class="button is-link" href="{{ url_for('logout') }}">Logout</a>
+          {% endif %}
+        </span>
       </div>
     </nav>
   </header>
-
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endwith %}
   <main>
     <section class="section">
       <div class="content">

@@ -1,19 +1,20 @@
-
+from app.models import User
 from flask_wtf import FlaskForm
-from wtforms import StringField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms_components import IntegerField
-from wtforms.validators import DataRequired, Optional, NumberRange
+from wtforms.validators import (DataRequired, Email, EqualTo, Optional, 
+                                NumberRange, ValidationError)
 
-# class LoginForm(FlaskForm):
-#     username = StringField('Username', validators=[DataRequired()])
-#     password = PasswordField('Password', validators=[DataRequired()])
-#     remember_me = BooleanField('Remember Me')
-#     submit = SubmitField('Sign In')
+class LoginForm(FlaskForm):
+    username = StringField('Username', validators=[DataRequired()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    remember_me = BooleanField('Remember Me')
+    submit = SubmitField('Sign In')
 
 class QueryEditForm(FlaskForm):
-    name = StringField("Name", validators=[DataRequired()])
+    name = StringField("Query Name", validators=[DataRequired()])
 
-    hashtag = StringField("Hashtag", validators=[DataRequired()])
+    hashtag = StringField("Query Terms", validators=[DataRequired()])
 
     number_results = IntegerField(
         "number_results",
@@ -22,3 +23,21 @@ class QueryEditForm(FlaskForm):
             NumberRange(min=1, max=500)
         ]
     )
+
+class RegistrationForm(FlaskForm):
+    username = StringField('Username', validators=[DataRequired()])
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    password2 = PasswordField(
+        'Repeat Password', validators=[DataRequired(), EqualTo('password')])
+    submit = SubmitField('Register')
+
+    def validate_username(self, username):
+        user = User.query.filter_by(username=username.data).first()
+        if user is not None:
+            raise ValidationError('Please use a different username.')
+    
+    def validate_email(self, email):
+        user = User.query.filter_by(email=email.data).first()
+        if user is not None:
+            raise ValidationError('Please use a different email address.')
