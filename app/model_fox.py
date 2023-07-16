@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 import spacy
 from bs4 import BeautifulSoup
-from cleantext import clean
+#from cleantext import clean
 from datetime import datetime
 from spacy.matcher import PhraseMatcher
 from spacy.tokens import Token
