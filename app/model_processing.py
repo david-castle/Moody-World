@@ -100,9 +100,9 @@ class ProcessingFrame():
     
     def applyToFrame(self):
         print("Creating popup column text.")
-        self.frame["Popup"] = self.frame.Headlines + "\n" + self.frame.Links
+        self.frame["Popup"] = self.frame.title + "\n" + self.frame.url
         print("Assigning location names.")
-        self.frame['LocationNames'] = self.frame.FullText.apply(self.getLocationNames)
+        self.frame['LocationNames'] = self.frame.content.apply(self.getLocationNames)
         print("Assigning coordinates when possible.")
         self.frame['Coordinates'] = self.frame.LocationNames.apply(self.getCoordinates)
         self.frame['Latitude'] = self.frame.Coordinates.apply(self.getLatitude)
@@ -112,8 +112,8 @@ class ProcessingFrame():
         self.frame.Longitude = pd.to_numeric(self.frame.Longitude, errors='coerce')
         self.frame.Longitude = self.frame.Longitude.apply(self.offSet)
         print("Getting frequent word counts.")
-        self.frame['FrequentWords'] = self.frame.FullText.apply(self.getFrequentWords)
+        self.frame['FrequentWords'] = self.frame.content.apply(self.getFrequentWords)
         print("Assigning colors for markers.")
         self.frame['Compound'] = self.frame['Compound'].astype("Float64")
         self.frame['Colors'] = self.frame.Compound.apply(self.getColors)
-        self.frame.to_csv("static/processed_frame.csv", index=False)
+        self.frame.to_csv("app/static/processed_frame.csv", index=False)

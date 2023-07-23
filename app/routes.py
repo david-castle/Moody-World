@@ -1,6 +1,6 @@
 import os
 from datetime import datetime
-from app import app, db, model_fox, model_guardian, model_nbc, model_processing
+from app import app, db, model_fox, model_guardian, model_nbc, model_processing, model_newsapi
 from app.email import send_password_reset_email
 from app.forms import LoginForm, QueryEditForm, RegistrationForm, ResetPasswordForm, ResetPasswordRequestForm
 from app.models import User
@@ -76,19 +76,21 @@ def processing():
         return render_template('processing.html')
     
     if request.method == 'POST':
-        n1 = model_nbc.newsSoupNBC()
-        f1 = model_fox.newsSoupFox()
-        g1 = model_guardian.newsSoupGuardian()
+        #n1 = model_nbc.newsSoupNBC()
+        #f1 = model_fox.newsSoupFox()
+        #g1 = model_guardian.newsSoupGuardian()
+        na1 = model_newsapi.NewsApi()
         print("Instantiated")
-        n1.getInfo()
-        n1.cleanAll_Tags()
-        n1.createDataFrame()
-        f1.getInfoh2()
-        f1.cleanAll_Tags_h2()
-        f1.createDataFrame()
-        g1.getInfo()
-        g1.cleanAll_Tags()
-        g1.createDataFrame()
+        # n1.getInfo()
+        # n1.cleanAll_Tags()
+        # n1.createDataFrame()
+        # f1.getInfoh2()
+        # f1.cleanAll_Tags_h2()
+        # f1.createDataFrame()
+        # g1.getInfo()
+        # g1.cleanAll_Tags()
+        # g1.createDataFrame()
+        na1.createDataFrame()
         p = model_processing.ProcessingFrame()
         p.readingFrames()
         p.applyToFrame()
