@@ -56,6 +56,7 @@ class NewsApi():
             dftemp = pd.DataFrame({'source': source, 'author': author, 'title' : title, 'description': description,
                         'url': url, 'url_to_image': url_to_image, 'published_on': published_on, 'content': content })
             df = pd.concat([self.df, dftemp], ignore_index=True)
+        df = df.drop_duplicates(inplace=True)
         print("Getting a sentiment score for the text.....")
         df['SentimentScore'] = df.content.apply(self.sentimentScores)
         df['Compound'] = df.SentimentScore.apply(lambda score_dict: score_dict['compound'])
