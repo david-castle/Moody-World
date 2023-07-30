@@ -1,4 +1,6 @@
 import glob
+import locationtagger
+import nltk
 import random
 import pandas as pd
 import requests
@@ -6,9 +8,28 @@ import spacy
 import urllib.parse
 
 from collections import Counter
+from datetime import datetime, date, timedelta
+#from geopy.geocoders import Nominatim
+from newsapi import NewsApiClient
+from requests.structures import CaseInsensitiveDict
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
+# essential entity models downloads; should only need once during first time use
+#nltk.downloader.download('maxent_ne_chunker')
+#nltk.downloader.download('words')
+#nltk.downloader.download('treebank')
+#nltk.downloader.download('maxent_treebank_pos_tagger')
+#nltk.downloader.download('punkt')
+#nltk.download('averaged_perceptron_tagger')
 
 class ProcessingFrame():
     nlp = spacy.load("en_core_web_lg")
+    nltk.downloader.download('maxent_ne_chunker')
+    nltk.downloader.download('words')
+    nltk.downloader.download('treebank')
+    nltk.downloader.download('maxent_treebank_pos_tagger')
+    nltk.downloader.download('punkt')
+    nltk.download('averaged_perceptron_tagger')
     frame = pd.DataFrame()
 
     def readingFrames(self):
@@ -25,17 +46,28 @@ class ProcessingFrame():
         return self.frame
 
     def getLocationNames(self, text):
-        doc = self.nlp(text)
-        for ent in doc.ents:
-            if ent.label_ == "GPE":
-                return ent.text
+        # extracting entities.
+        place_entity = locationtagger.find_locations(text = text)
+        locationNames = {"Countries": place_entity.countries, "States": place_entity.regions, 
+                         "Cities": place_entity.cities}        
+        return locationNames
 
     def getCoordinates(self, text):
+        if len(text['Cities']) >= 1:
+            place = text['Cities']
+        elif len(text['States']) >= 1:
+            place = text['States']
+        elif len(text['Countries']) >= 1:
+            place = text['Countries']
+            
         try:
-            address = str(text)
-            url = 'https://nominatim.openstreetmap.org/search/' + urllib.parse.quote(address) +'?format=json'
-            response = requests.get(url).json()
-            coordinates = response[0]["lat"], response[0]["lon"]
+            #1loc = place[0]
+            url = "https://api.geoapify.com/v1/geocode/search?text=" + place[0] + "&apiKey=43a11a6b22cd4143a539fea67a98e798"
+            headers = CaseInsensitiveDict()
+            headers["Accept"] = "application/json"
+            resp = requests.get(url, headers=headers)
+            data = resp.json()
+            coordinates = data['features'][0]['properties']['lat'], data['features'][0]['properties']['lon']
             return coordinates
         except:
             return "No Location found."
@@ -48,7 +80,7 @@ class ProcessingFrame():
 
     def offSet(self, text):
         try:
-            return text + random.uniform(-0.02, 0.02)
+            return text + random.uniform(-0.5, 0.5)
         except:
             pass
 
@@ -117,3 +149,4 @@ class ProcessingFrame():
         self.frame['Compound'] = self.frame['Compound'].astype("Float64")
         self.frame['Colors'] = self.frame.Compound.apply(self.getColors)
         self.frame.to_csv("app/static/processed_frame.csv", index=False)
+        print('Results were saved. Query processing is complete')
