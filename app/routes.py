@@ -1,4 +1,3 @@
-import os
 from datetime import datetime
 from app import app, db, model_processing, model_newsapi
 from app.email import send_password_reset_email
@@ -65,8 +64,12 @@ def results():
 def query_add_page():
     form = QueryEditForm()
     if request.method == 'POST':
+        file = open('temp/searchterms.txt', 'w')
+        s = form.searchterms.data
+        file.write(s)
+        file.close()
         return redirect(url_for("processing"))
-    return render_template("n_query.html", form=form)
+    return render_template("query.html", form=form)
 
 @app.route("/processing", methods=["GET", "POST"])
 @login_required
@@ -74,33 +77,16 @@ def processing():
     print("Start")
     if request.method == 'GET':
         return render_template('processing.html')
-    
+
     if request.method == 'POST':
-        #n1 = model_nbc.newsSoupNBC()
-        #f1 = model_fox.newsSoupFox()
-        #g1 = model_guardian.GuardianAPI()
         na1 = model_newsapi.NewsApi()
         print("Instantiated")
-        # n1.getInfo()
-        # n1.cleanAll_Tags()
-        # n1.createDataFrame()
-        # f1.getInfoh2()
-        # f1.cleanAll_Tags_h2()
-        # f1.createDataFrame()
-        #g1.createDataFrame()
-        na1.ScoreAndSave()
+        term = "term"
+        na1.ScoreAndSave(term)
         p = model_processing.ProcessingFrame()
         p.readingFrames()
         p.applyToFrame()
-        print("Cleaning up.")
-        for folder, subfolders, files in os.walk('temp/'):
-            for file in files:
-                if file.endswith('.csv'):
-                    path = os.path.join(folder, file)
-                    print('deleted : ', path)
-                    os.remove(path)
         return "Done" 
-        #return render_template('processing.html')
 
 @app.route("/query-results", methods=["GET", "POST"])
 @login_required

@@ -7,13 +7,15 @@ class NewsApi():
     def __init__(self):
         print("NewsAPI constructor.")
     
-    def getInfo(self):
+    def getInfo(self, term):
         print("NewsAPI: Getting the base info...")  
         # Init
+        file1 = open("temp/searchterms.txt","r+")
+        term = str(file1.read())
         newsapi = NewsApiClient(api_key='87edec59c3ba4e03939a5ad21f02c52a')
         to_date = date.today()
         from_date = to_date - timedelta(days=28)
-        all_articles = newsapi.get_everything(q='Ukraine AND China',
+        all_articles = newsapi.get_everything(q=str(term),
                                             #sources='bbc-news,the-verge',
                                             #domains='bbc.co.uk,techcrunch.com',
                                             from_param=str(from_date),
@@ -46,12 +48,12 @@ class NewsApi():
         counter += 1
         return applied_ID
 
-    def createDataFrame(self):
-        print("Create the NewsAPI dataframe")
+    def createDataFrame(self, term):
         df = pd.DataFrame(columns = ['source', 'author', 'title', 'description', 'url', 
                                  'url_to_image', 'published_on', 'content'])
-        dictionary = self.getInfo()
+        dictionary = self.getInfo(term)
         articles = dictionary['articles']
+        print("Create the NewsAPI dataframe")
         for i in range(len(articles)):
             source = articles[i]['source']['name']
             author = articles[i]['author']
@@ -67,9 +69,9 @@ class NewsApi():
             df.drop(df[df['source']== 'Google News'].index, inplace = True)
         return df
     
-    def ScoreAndSave(self):
+    def ScoreAndSave(self, term):
+        df_final = self.createDataFrame(term)
         print("Getting a sentiment score for the text.....")
-        df_final = self.createDataFrame()
         df_final['SentimentScore'] = df_final.content.apply(self.sentimentScores)
         df_final['Compound'] = df_final.SentimentScore.apply(lambda score_dict: score_dict['compound'])
         run = datetime.now().strftime('%Y%m%d-%H-%M-%S-%f')

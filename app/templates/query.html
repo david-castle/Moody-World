@@ -20,11 +20,11 @@
     </div>
 
     <div class="field">
-        <label for="hashtag" class="label">Hashtag</label>
+        <label for="searchterms" class="label">Search Terms</label>
         <div class="control">
-            {{ form.hashtag(required=True, autofocus=True, class='input') }}
+            {{ form.searchterms(required=True, autofocus=True, class='input') }}
         </div>
-        {% for error in form.hashtag.errors %}
+        {% for error in form.searchterms.errors %}
         <p class="help has-background-warning">
             {{ error }}
         </p>
