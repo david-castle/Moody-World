@@ -13,14 +13,12 @@ class LoginForm(FlaskForm):
 
 class QueryEditForm(FlaskForm):
     name = StringField("Query Name", validators=[DataRequired()])
-
-    hashtag = StringField("Query Terms", validators=[DataRequired()])
-
+    searchterms = StringField("Search Terms", validators=[DataRequired()])
     number_results = IntegerField(
         "number_results",
         validators=[
             Optional(),
-            NumberRange(min=1, max=500)
+            NumberRange(min=1, max=100)
         ]
     )
 
@@ -41,3 +39,13 @@ class RegistrationForm(FlaskForm):
         user = User.query.filter_by(email=email.data).first()
         if user is not None:
             raise ValidationError('Please use a different email address.')
+        
+class ResetPasswordRequestForm(FlaskForm):
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    submit = SubmitField('Request Password Reset')
+
+class ResetPasswordForm(FlaskForm):
+    password = PasswordField('Password', validators=[DataRequired()])
+    password2 = PasswordField(
+        'Repeat Password', validators=[DataRequired(), EqualTo('password')])
+    submit = SubmitField('Request Password Reset')

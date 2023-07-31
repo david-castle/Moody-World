@@ -10,8 +10,10 @@ Based on the sentiment score, the markers appear in a 10 step gradient of colors
 While the requirements file shows all necessary packages for this project, most will be automatically installed when installing the following core packages using pip: <br>
 - pip install beautifulsoup4<br>
 - pip install Flask<br>
+- pip install Flask-Mail<br>
 - pip install Flask-WTF<br>
 - pip install glob2<br>
+- pip install jwt<br>
 - pip install pandas<br>
 - pip install requests<br>
 - pip install spacy<br>
