@@ -12,15 +12,15 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Sign In')
 
 class QueryEditForm(FlaskForm):
-    name = StringField("Query Name", validators=[DataRequired()])
+    #name = StringField("Query Name", validators=[DataRequired()])
     searchterms = StringField("Search Terms", validators=[DataRequired()])
-    number_results = IntegerField(
-        "number_results",
-        validators=[
-            Optional(),
-            NumberRange(min=1, max=100)
-        ]
-    )
+    #number_results = IntegerField(
+    #    "number_results",
+    #    validators=[
+    #        Optional(),
+    #        NumberRange(min=1, max=100)
+    #    ]
+    #)
 
 class RegistrationForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
