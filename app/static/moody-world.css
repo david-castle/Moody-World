@@ -1,11 +1,89 @@
-h1 {
+html {
+    box-sizing: border-box;
+    margin: auto;
+}
+
+header {
+    background: #eee;
+}
+
+header > .header-inner {
+    width: 1200px;
+    max-width: 100%;
+    padding: 1.5rem 2rem;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    grid-gap: 1rem 3rem;
+    flex-wrap: wrap;
+    
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100lvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand {
+    display: flex;
+    grid-gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.navbar-brand span:hover a {
+    text-decoration: underline;
+}
+
+.navbar-brand a {
+    background: navy;
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+
+* {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
     color: navy;
+}
+
+p:last-child {
+    margin-bottom: 0px;
+}
+p:first-child {
+    margin-top: 0px;
+}
+
+main h2 {
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
 }
 
 footer {
     display: flex;
     text-align: center;
-    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
@@ -13,4 +91,91 @@ footer {
     height: 2.5rem;
     justify-content: center;
     align-items: center;
+    background:#eee;
+}
+
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.form {
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 2px;
+    max-width: 100%;
+    width: 25rem;
+    margin:1rem;
+}
+
+.form input[type="text"], .form input[type="password"] {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+main {
+    flex-grow: 1;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 1200px;
+    max-width: 100%;
+    padding: 0 2rem;
+    margin: 2rem auto;
+}
+.flashed_messages {
+    list-style-type: none;
+    padding:0;
+    text-align: center;
+    color: red;
+}
+
+
+/* Center the loader */
+#loader {
+position: absolute;
+left: 50%;
+top: 50%;
+z-index: 1;
+width: 120px;
+height: 120px;
+margin: -76px 0 0 -76px;
+border: 16px solid #f3f3f3;
+border-radius: 50%;
+border-top: 16px solid #3498db;
+-webkit-animation: spin 2s linear infinite;
+animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+0% { -webkit-transform: rotate(0deg); }
+100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+position: relative;
+-webkit-animation-name: animatebottom;
+-webkit-animation-duration: 1s;
+animation-name: animatebottom;
+animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+from { bottom:-100px; opacity:0 } 
+to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+from{ bottom:-100px; opacity:0 } 
+to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+display: none;
+text-align: center;
 }
