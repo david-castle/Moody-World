@@ -5,13 +5,16 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 class NewsApi():
     def __init__(self):
-        print("NewsAPI constructor.")
+        print("NewsAPI instantiated.")
     
-    def getInfo(self, term):
-        print("NewsAPI: Getting the base info...")  
+    def getInfo(self):
+        print("NewsAPI: Gett the base info...")  
         # Init
         file1 = open("temp/searchterms.txt","r+")
-        term = str(file1.read())
+        term = "".join(file1.readline())
+        print(term)
+        #keywords = self.convertKeyWords(term)
+        #print(keywords)
         newsapi = NewsApiClient(api_key='87edec59c3ba4e03939a5ad21f02c52a')
         to_date = date.today()
         from_date = to_date - timedelta(days=28)
@@ -24,6 +27,14 @@ class NewsApi():
                                             sort_by='relevancy')
                                             #page=2)
         return all_articles
+    
+    def convertKeyWords(self, wordList):
+        wordLower = [x.lower() for x in wordList]
+        if len(wordLower) > 1:
+            keywords = '%20AND%20'.join(wordLower)
+            return keywords
+        else:
+            return str(wordLower[0])
 
     def sentimentScores(self, text):
         # Create sentiment intensity analyzer object
@@ -48,10 +59,10 @@ class NewsApi():
         counter += 1
         return applied_ID
 
-    def createDataFrame(self, term):
+    def createDataFrame(self):
         df = pd.DataFrame(columns = ['source', 'author', 'title', 'description', 'url', 
                                  'url_to_image', 'published_on', 'content'])
-        dictionary = self.getInfo(term)
+        dictionary = self.getInfo()
         articles = dictionary['articles']
         print("Create the NewsAPI dataframe")
         for i in range(len(articles)):
@@ -69,12 +80,12 @@ class NewsApi():
             df.drop(df[df['source']== 'Google News'].index, inplace = True)
         return df
     
-    def ScoreAndSave(self, term):
-        df_final = self.createDataFrame(term)
-        print("Getting a sentiment score for the text.....")
+    def ScoreAndSave(self):
+        df_final = self.createDataFrame()
+        print("Get a sentiment score for the text.....")
         df_final['SentimentScore'] = df_final.content.apply(self.sentimentScores)
         df_final['Compound'] = df_final.SentimentScore.apply(lambda score_dict: score_dict['compound'])
         run = datetime.now().strftime('%Y%m%d-%H-%M-%S-%f')
-        print("Saving the dataframe.....")
+        print("Save the dataframe.....")
         df_final.to_csv(f'temp/news_NewsAPI_{run}.csv', index=False)
         print("NewsAPI: All done!")

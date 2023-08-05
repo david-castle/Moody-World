@@ -1,5 +1,5 @@
 from datetime import datetime
-from app import app, db, model_processing, model_newsapi
+from app import app, db, model_processing, model_gnewsapi, model_newsapi
 from app.email import send_password_reset_email
 from app.forms import LoginForm, QueryEditForm, RegistrationForm, ResetPasswordForm, ResetPasswordRequestForm
 from app.models import User
@@ -81,9 +81,9 @@ def processing():
 
     if request.method == 'POST':
         na1 = model_newsapi.NewsApi()
-        print("Instantiated")
-        term = "term"
-        na1.ScoreAndSave(term)
+        na1.ScoreAndSave()
+        na2 = model_gnewsapi.GNewsApi()
+        na2.ScoreAndSave()
         p = model_processing.ProcessingFrame()
         p.readingFrames()
         p.applyToFrame()

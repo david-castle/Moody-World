@@ -4,6 +4,7 @@ import locationtagger
 import nltk
 import os
 import random
+import re
 import pandas as pd
 import requests
 import spacy
@@ -80,7 +81,7 @@ class ProcessingFrame():
                   'Zimbabwe']
 
     def readingFrames(self):
-        print("Reading all the frames.")
+        print("Read all the frames.")
         file_list = glob.glob("temp/*.csv")
 
         files = []
@@ -90,10 +91,12 @@ class ProcessingFrame():
             files.append(df)
 
         self.frame = pd.concat(files, axis=0, ignore_index=True)
+        self.frame.drop_duplicates(inplace=True)
         return self.frame
 
-    def getLocationNames(self, text):
+    def getLocationNames(self, text_in):
         # extracting entities.
+        text = re.sub(r"[^a-zA-Z0-9 ]", "", text_in)
         locationNames = {'Countries': ['Peru']}
         place_entity = locationtagger.find_locations(text = text)
         for i in range(len(place_entity.cities)):
@@ -189,11 +192,11 @@ class ProcessingFrame():
             return "#fc0c0c"
     
     def applyToFrame(self):
-        print("Creating popup column text.")
+        print("Create popup column text.")
         self.frame["Popup"] = self.frame.title + "\n" + self.frame.url
-        print("Assigning location names.")
-        self.frame['LocationNames'] = self.frame.description.apply(self.getLocationNames)
-        print("Assigning coordinates when possible.")
+        print("Get location names.")
+        self.frame['LocationNames'] = self.frame.title.apply(self.getLocationNames)
+        print("Get coordinates.")
         self.frame['Coordinates'] = self.frame.LocationNames.apply(self.getCoordinates)
         self.frame['Latitude'] = self.frame.Coordinates.apply(self.getLatitude)
         self.frame.Latitude = pd.to_numeric(self.frame.Latitude, errors='coerce')
@@ -201,9 +204,9 @@ class ProcessingFrame():
         self.frame['Longitude'] = self.frame.Coordinates.apply(self.getLongitude)
         self.frame.Longitude = pd.to_numeric(self.frame.Longitude, errors='coerce')
         self.frame.Longitude = self.frame.Longitude.apply(self.offSet)
-        print("Getting frequent word counts.")
+        print("Get frequent word counts.")
         self.frame['FrequentWords'] = self.frame.content.apply(self.getFrequentWords)
-        print("Assigning colors for markers.")
+        print("Assign colors for markers.")
         self.frame['Compound'] = self.frame['Compound'].astype("Float64")
         self.frame['Colors'] = self.frame.Compound.apply(self.getColors)
         self.frame.to_csv("app/static/processed_frame.csv", index=False)

@@ -7,20 +7,20 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 class GNewsApi():
     def __init__(self):
-        print("GNewsAPI instantiated.")
+        print("NewsDataAPI instantiated.")
 
     def getInfo(self):
-        print("GNewsAPI: Get the base info...")  
+        print("NewsDataAPI: Get the base info...")  
         # Init
         file1 = open("temp/searchterms.txt","r+")
         term = "".join(file1.readline()).split(', ')
-        base_url = "https://gnews.io/api/v4/search?q="
+        base_url = "https://newsdata.io/api/1/news?"
         keywords = self.convertKeyWords(term)
         language = "&lang=en"
         max_return = "&max=10" #default for free plan is 10
         #from_date = "&from-date=" + str(default_date)
-        apikey = "&apikey=09fc1663f2898e244bd33b4cc76c254c"
-        url = base_url + keywords + language + max_return + apikey
+        apikey = "apikey=pub_27238b44ca178461c62ff294307456683f97f&q="
+        url = base_url + apikey + keywords
         with urllib.request.urlopen(url) as response:
             data = json.loads(response.read().decode("utf-8"))
             all_articles = data["articles"]
@@ -61,15 +61,15 @@ class GNewsApi():
         df = pd.DataFrame(columns = ['source', 'author', 'title', 'description', 'url', 
                                  'url_to_image', 'published_on', 'content'])
         articles = self.getInfo()
-        print("Create the NewsAPI dataframe")
+        print("Create the NewsDataAPI dataframe")
         for i in range(len(articles)):
-            source = articles[i]['source']['name']
+            source = articles[i]['source_id']
             author = "Author not available"
             title = articles[i]['title']
             description = articles[i]['description']
-            url = articles[i]['url']
-            url_to_image = articles[i]['image']
-            published_on = articles[i]['publishedAt']
+            url = articles[i]['link']
+            url_to_image = articles[i]['image_url']
+            published_on = articles[i]['pubDate']
             content = articles[i]['content']
             dftemp = pd.DataFrame({'source': source, 'author': author, 'title' : title, 'description': description,
                         'url': url, 'url_to_image': url_to_image, 'published_on': published_on, 'content': content }, index=[i])
@@ -84,6 +84,6 @@ class GNewsApi():
         df_final['Compound'] = df_final.SentimentScore.apply(lambda score_dict: score_dict['compound'])
         run = datetime.now().strftime('%Y%m%d-%H-%M-%S-%f')
         print("Save the dataframe.....")
-        df_final.to_csv(f'temp/news_GNewsAPI_{run}.csv', index=False)
-        print("GNewsAPI: All done!")
+        df_final.to_csv(f'temp/news_NewsDataAPI_{run}.csv', index=False)
+        print("NewsDataAPI: All done!")
 
