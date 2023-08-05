@@ -169,25 +169,25 @@ class ProcessingFrame():
     
     def getColors(self, text):
         if (text >= -1.0) & (text < -0.8):
-            return "#056607"
+            return "#fa2525"
         elif (text >= -0.8) & (text < -0.6):
-            return "#2d6900"
+            return "#f95323"
         elif (text >= -0.6) & (text < -0.4):
-            return "#476a00"
+            return "#f98121"
         elif (text >= -0.4) & (text < 0.2):
-            return "#606a00"
+            return "#f8b01f"
         elif (text >= 0.2) & (text < 0.0):
-            return "#7a6800"
+            return "#f8e01d"
         elif (text >= 0.2) & (text < 0.4):
-            return "#946400"
+            return "#dff71b"
         elif (text >= 0.4) & (text < 0.6):
-            return "#ae5c00"
+            return "#adf71a"
         elif (text >= 0.6) & (text < 0.8):
-            return "#c94f00"
+            return "#7bf618"
         elif (text >= 0.6) & (text < 0.8):
-            return "#e33b00"
+            return "#48f616"
         else:
-            return "#fc0c0c"
+            return "#14f514"
     
     def applyToFrame(self):
         print("Creating popup column text.")
