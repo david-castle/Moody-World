@@ -7,9 +7,6 @@ from flask import Flask, flash, redirect, render_template, request, url_for
 from flask_login import current_user, login_required, login_user, logout_user
 from werkzeug.urls import url_parse
 
-import pandas as pd
-
-df = pd.read_csv("/Users/davidcastle/Documents/workspace/Moody-World/app/static/processed_frame.csv")
 
 #@app.route("/")
 @app.route("/home")
@@ -95,8 +92,7 @@ def processing():
 @app.route("/query-results", methods=["GET", "POST"])
 @login_required
 def query_results():
-    return render_template("results.html", 
-                           table=[df.to_html(classes='data', index = False)], titles= df.columns.values)
+    return render_template("results.html")
 
 @app.route('/reset_password_request', methods=['GET', 'POST'])
 def reset_password_request():
