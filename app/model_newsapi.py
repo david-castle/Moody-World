@@ -64,7 +64,7 @@ class NewsApi():
             published_on = articles[i]['publishedAt']
             content = articles[i]['content']
             dftemp = pd.DataFrame({'source': source, 'author': author, 'title' : title, 'description': description,
-                        'url': url, 'url_to_image': url_to_image, 'published_on': published_on, 'content': content })
+                        'url': url, 'url_to_image': url_to_image, 'published_on': published_on, 'content': content }, index=[i])
             df = pd.concat([df, dftemp], ignore_index=True)
             df.drop(df[df['source']== 'Google News'].index, inplace = True)
         return df

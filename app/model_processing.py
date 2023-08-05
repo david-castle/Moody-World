@@ -108,7 +108,6 @@ class ProcessingFrame():
                         locationNames['Countries'] = place_entity.countries   
                     else:
                         pass
-        print(locationNames)
         return locationNames
 
     def getCoordinates(self, text):
