@@ -1,5 +1,5 @@
 from datetime import datetime
-from app import app, db, model_processing, model_newsapi
+from app import app, db, model_processing, model_gnewsapi, model_newsapi
 from app.email import send_password_reset_email
 from app.forms import LoginForm, QueryEditForm, RegistrationForm, ResetPasswordForm, ResetPasswordRequestForm
 from app.models import User
@@ -8,7 +8,7 @@ from flask_login import current_user, login_required, login_user, logout_user
 from werkzeug.urls import url_parse
 
 
-@app.route("/")
+#@app.route("/")
 @app.route("/home")
 def home():
     return render_template("home.html")
@@ -20,7 +20,7 @@ def about():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for("/"))
+        return redirect(url_for("/home"))
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -45,7 +45,7 @@ def register():
         return redirect(url_for('/'))
     form = RegistrationForm()
     if form.validate_on_submit():
-        user = User(id=datetime.now().strftime('%Y%m%d%H%M%S%f'), 
+        user = User(id=int(datetime.now().strftime('%m%d%H%M%S%f')), 
                     username=form.username.data, email=form.email.data)
         user.set_password(form.password.data)
         db.session.add(user)
@@ -81,9 +81,9 @@ def processing():
 
     if request.method == 'POST':
         na1 = model_newsapi.NewsApi()
-        print("Instantiated")
-        term = "term"
-        na1.ScoreAndSave(term)
+        na1.ScoreAndSave()
+        na2 = model_gnewsapi.GNewsApi()
+        na2.ScoreAndSave()
         p = model_processing.ProcessingFrame()
         p.readingFrames()
         p.applyToFrame()
