@@ -8,7 +8,7 @@ from flask_login import current_user, login_required, login_user, logout_user
 from werkzeug.urls import url_parse
 
 
-#@app.route("/")
+@app.route("/")
 @app.route("/home")
 def home():
     return render_template("home.html")
@@ -20,7 +20,7 @@ def about():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for("/home"))
+        return redirect(url_for("/"))
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
