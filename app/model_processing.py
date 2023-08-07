@@ -4,6 +4,7 @@ import locationtagger
 import nltk
 import os
 import random
+import re
 import pandas as pd
 import requests
 import spacy
@@ -80,7 +81,7 @@ class ProcessingFrame():
                   'Zimbabwe']
 
     def readingFrames(self):
-        print("Reading all the frames.")
+        print("Read all the frames.")
         file_list = glob.glob("temp/*.csv")
 
         files = []
@@ -90,10 +91,12 @@ class ProcessingFrame():
             files.append(df)
 
         self.frame = pd.concat(files, axis=0, ignore_index=True)
+        self.frame.drop_duplicates(inplace=True)
         return self.frame
 
-    def getLocationNames(self, text):
+    def getLocationNames(self, text_in):
         # extracting entities.
+        text = re.sub(r"[^a-zA-Z0-9 ]", "", text_in)
         locationNames = {'Countries': ['Peru']}
         place_entity = locationtagger.find_locations(text = text)
         for i in range(len(place_entity.cities)):
@@ -108,7 +111,6 @@ class ProcessingFrame():
                         locationNames['Countries'] = place_entity.countries   
                     else:
                         pass
-        print(locationNames)
         return locationNames
 
     def getCoordinates(self, text):
@@ -169,32 +171,32 @@ class ProcessingFrame():
     
     def getColors(self, text):
         if (text >= -1.0) & (text < -0.8):
-            return "#056607"
+            return "#fa2525"
         elif (text >= -0.8) & (text < -0.6):
-            return "#2d6900"
+            return "#f95323"
         elif (text >= -0.6) & (text < -0.4):
-            return "#476a00"
+            return "#f98121"
         elif (text >= -0.4) & (text < 0.2):
-            return "#606a00"
+            return "#f8b01f"
         elif (text >= 0.2) & (text < 0.0):
-            return "#7a6800"
+            return "#f8e01d"
         elif (text >= 0.2) & (text < 0.4):
-            return "#946400"
+            return "#dff71b"
         elif (text >= 0.4) & (text < 0.6):
-            return "#ae5c00"
+            return "#adf71a"
         elif (text >= 0.6) & (text < 0.8):
-            return "#c94f00"
+            return "#7bf618"
         elif (text >= 0.6) & (text < 0.8):
-            return "#e33b00"
+            return "#48f616"
         else:
-            return "#fc0c0c"
+            return "#14f514"
     
     def applyToFrame(self):
-        print("Creating popup column text.")
+        print("Create popup column text.")
         self.frame["Popup"] = self.frame.title + "\n" + self.frame.url
-        print("Assigning location names.")
-        self.frame['LocationNames'] = self.frame.description.apply(self.getLocationNames)
-        print("Assigning coordinates when possible.")
+        print("Get location names.")
+        self.frame['LocationNames'] = self.frame.title.apply(self.getLocationNames)
+        print("Get coordinates.")
         self.frame['Coordinates'] = self.frame.LocationNames.apply(self.getCoordinates)
         self.frame['Latitude'] = self.frame.Coordinates.apply(self.getLatitude)
         self.frame.Latitude = pd.to_numeric(self.frame.Latitude, errors='coerce')
@@ -202,9 +204,9 @@ class ProcessingFrame():
         self.frame['Longitude'] = self.frame.Coordinates.apply(self.getLongitude)
         self.frame.Longitude = pd.to_numeric(self.frame.Longitude, errors='coerce')
         self.frame.Longitude = self.frame.Longitude.apply(self.offSet)
-        print("Getting frequent word counts.")
+        print("Get frequent word counts.")
         self.frame['FrequentWords'] = self.frame.content.apply(self.getFrequentWords)
-        print("Assigning colors for markers.")
+        print("Assign colors for markers.")
         self.frame['Compound'] = self.frame['Compound'].astype("Float64")
         self.frame['Colors'] = self.frame.Compound.apply(self.getColors)
         self.frame.to_csv("app/static/processed_frame.csv", index=False)
