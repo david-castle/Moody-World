@@ -215,7 +215,7 @@ div.leaflet-bar a:hover {
     padding: 2em;
 }
 
-.resultList-item p {
+.resultList-item .third-line {
     margin: .5rem 0;
     margin-left: 1.5em;
 }
