@@ -5,73 +5,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scrape-Visualize - {% block title %}{% endblock %}</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"/>
   <link rel="stylesheet" href="{{ url_for('static', filename='moody-world.css') }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-      /* Center the loader */
-      #loader {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      z-index: 1;
-      width: 120px;
-      height: 120px;
-      margin: -76px 0 0 -76px;
-      border: 16px solid #f3f3f3;
-      border-radius: 50%;
-      border-top: 16px solid #3498db;
-      -webkit-animation: spin 2s linear infinite;
-      animation: spin 2s linear infinite;
-      }
-
-      @-webkit-keyframes spin {
-      0% { -webkit-transform: rotate(0deg); }
-      100% { -webkit-transform: rotate(360deg); }
-      }
-
-      @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-      }
-
-      /* Add animation to "page content" */
-      .animate-bottom {
-      position: relative;
-      -webkit-animation-name: animatebottom;
-      -webkit-animation-duration: 1s;
-      animation-name: animatebottom;
-      animation-duration: 1s
-      }
-
-      @-webkit-keyframes animatebottom {
-      from { bottom:-100px; opacity:0 } 
-      to { bottom:0px; opacity:1 }
-      }
-
-      @keyframes animatebottom { 
-      from{ bottom:-100px; opacity:0 } 
-      to{ bottom:0; opacity:1 }
-      }
-
-      #myDiv {
-      display: none;
-      text-align: center;
-      }
-  </style>
 </head>
 
 
 <body onload="myFunction()" style="margin:0;">
-    <header>
-        <nav class="navbar" aria-label="main-navigation">
-          <div class="navbar-brand">
-            <span class="navbar-item">
-              <a class="button is-link" href="{{ url_for('home') }}">Home</a>
-            </span>
-          </div>
-        </nav>
+
+
+      <header>
+        <div class="header-inner">
+          <h1>Moody World</h1>
+          <div style="flex-grow:1"></div>
+          <nav class="navbar" aria-label="main-navigation">
+            <div class="navbar-brand">
+              <span class="navbar-item">
+                <a class="button is-link" href="{{ url_for('home') }}">← Return to Home</a>
+              </span>
+            </div>
+          </nav>
+          <!--div>
+            {% if current_user.is_anonymous %}
+              <p>Logged Out</p>
+            {% else %}
+              <p>Logged in as: {{ current_user.username}}</p>
+            {% endif %}
+          </div-->
+        </div>
       </header>
+    
+    
 
     <main>
         <div id="loader"></div>
