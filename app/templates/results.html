@@ -18,6 +18,7 @@
 <body>
     <!-- Insert HTML division tag to layout the map -->
     <div id="map"></div>
+    <div class="resultList"></div>
 
     <!-- Insert Javascript (.js) code to create the map -->
     <script>
@@ -35,12 +36,19 @@
             collapsed: false
         }).addTo(map);
 
+        var DarkMap = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+            maxZoom: 20,
+            attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        controlLayers.addBaseLayer(DarkMap, 'Dark mode')
+
+
         // load a tile layer
         var base = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', 
             {
                 maxZoom: 19,
                 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            }).addTo(map);
+            });
             controlLayers.addBaseLayer(base, 'Standard basemap')
         
         // display Carto basemap tiles with light features and labels
@@ -66,7 +74,12 @@
             var data = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
 
             // For each row in data, create a marker and add it to the map
-            // For each row, columns `Latitude`, `Longitude`, and `Title` are required            
+            // For each row, columns `Latitude`, `Longitude`, and `Title` are required  
+            for (var i in data) {
+                if (data[i].Popup)
+                    $(".resultList").append(`<div class="resultList-item"><p>${data[i].Popup}</p>`)
+            }
+          
             for (var i in data) {
                 var row = data[i];
                 if (!row.Color) {
@@ -84,13 +97,11 @@
                     icon: icon
                 }).bindPopup(row.Popup);
                 marker.addTo(map);
-            }  
-
-
+            }
         });
         map.attributionControl.setPrefix(
-    'View <a href="https://github.com/HandsOnDataViz/leaflet-map-csv" target="_blank">code on GitHub</a>'
-  );
+            'View <a href="https://github.com/HandsOnDataViz/leaflet-map-csv" target="_blank">code on GitHub</a>'
+        );
     </script>
 </body>
    

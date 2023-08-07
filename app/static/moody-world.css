@@ -1,10 +1,13 @@
 html {
     box-sizing: border-box;
     margin: auto;
+    background: #1c2333;
+    color: white;
 }
 
-header {
-    background: #eee;
+
+header, footer {
+    background: #0e1525;
 }
 
 header > .header-inner {
@@ -46,13 +49,13 @@ body {
 }
 
 .navbar-brand a {
-    background: navy;
-    color: white;
+    background: #162f68;
     padding: .5rem 1rem;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
     display: block;
+    color: white;
+    font-weight: normal;
 }
 
 
@@ -60,10 +63,6 @@ body {
     font-family: 'Source Serif 4', serif;
     font-weight: 500;
     box-sizing: border-box;
-}
-
-h1, h2, h3 {
-    color: navy;
 }
 
 p:last-child {
@@ -91,7 +90,10 @@ footer {
     height: 2.5rem;
     justify-content: center;
     align-items: center;
-    background:#eee;
+}
+
+a {
+    color: white;
 }
 
 
@@ -101,16 +103,31 @@ footer {
 }
 .form {
     padding: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    border-radius: 2px;
+    border-radius: 6px;
     max-width: 100%;
     width: 25rem;
     margin:1rem;
+    background: #2b3245;;
 }
 
 .form input[type="text"], .form input[type="password"] {
     width: 100%;
     border: 1px solid gray;
+    background: #f0f0f0;
+    padding: 0.2rem 0.4rem;
+    border-radius: 5px;
+    margin-top: 0.2rem;
+}
+
+.form [type="submit"], button.is-primary {
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.form [type="submit"]:hover, button.is-primary:hover {
+    background: #ccc;
 }
 
 main {
@@ -178,4 +195,42 @@ to{ bottom:0; opacity:1 }
 #myDiv {
 display: none;
 text-align: center;
+}
+
+
+div.leaflet-control-layers, div.leaflet-bar a, .leaflet-container .leaflet-control-attribution {
+    background: #1c2333 !important;
+    color: white;
+}
+
+div.leaflet-bar a:hover {
+    background: #2d3c5d;
+}
+
+.leaflet-container .leaflet-control-attribution a {
+    color: #888888;
+}
+
+.resultList {
+    padding: 2em;
+}
+
+@media (max-width: 700px) {
+    .resultList {
+        padding: 1em 0;
+    }
+}
+
+.resultList > div {
+    margin-top: 0.5em 0;
+    padding: 0.5em;
+    word-wrap: break-word;
+}
+
+.resultList-item:not(:last-child) {
+    border-bottom: 1px solid rgba(255,255,255, .2);
+}
+
+.leaflet-popup-content {
+    word-wrap: break-word;
 }
