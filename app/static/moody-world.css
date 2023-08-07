@@ -217,6 +217,7 @@ div.leaflet-bar a:hover {
 
 .resultList-item p {
     margin: .5rem 0;
+    margin-left: 1.5em;
 }
 
 .resultList-item a {
@@ -228,17 +229,21 @@ div.leaflet-bar a:hover {
 }
 
 .resultList .colorCircle {
-    background-color: #476a00;
     height: 1rem;
     width: 1rem;
     display: inline-block;
     border-radius: 100px;
+    flex-shrink: 0;
 }
 
 .resultList .first-line {
         display: flex;
         grid-gap: 0.5rem;
         align-items: center;
+}
+
+.resultList .second-line {
+    margin-left: 1.5em;
 }
 
 .resultList h3, .resultList h4 {
