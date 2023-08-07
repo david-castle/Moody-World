@@ -72,12 +72,23 @@
 
             // Use PapaParse to convert string to array of objects
             var data = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
+            console.log("data", data)
 
             // For each row in data, create a marker and add it to the map
             // For each row, columns `Latitude`, `Longitude`, and `Title` are required  
             for (var i in data) {
-                if (data[i].Popup)
-                    $(".resultList").append(`<div class="resultList-item"><p>${data[i].Popup}</p>`)
+                $(".resultList").append(`
+                    <div class="resultList-item">
+                        <div class="first-line">
+                            <span class="colorCircle" style="background-color:${data[i].Colors}"></span> 
+                            <h3><a href="${data[i].url}" target="_blank rel="noopener noreferrer">${data[i].title}</a></h3> | 
+                            <h4>${data[i].source}</h4>
+                        </div>
+                        <p>
+                            ${data[i].description}
+                        </p>
+                    </div>`
+                )
             }
           
             for (var i in data) {
