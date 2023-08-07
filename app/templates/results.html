@@ -92,7 +92,25 @@
     'View <a href="https://github.com/HandsOnDataViz/leaflet-map-csv" target="_blank">code on GitHub</a>'
   );
     </script>
-    
+    <!-- Insert HTML division tag to layout the table -->
+    <div id="table"></div>
+    <Script>
+        $.get('static/processed_frame.csv', function(csvString) {
+
+            // Use PapaParse to convert string to array of objects
+            var spreadsheet = Papa.parse(csvString, {header: false, 
+                complete: function (results) {
+                results.data[0].map(function (id, index) {
+                    var element = document.querySelector('#' + id);
+                    if (element) { // exist
+                    element.innerHTML = results.data[1][index];
+                    }
+                });
+                }
+            });
+            })
+
+    </Script>
 
 </body>
 
