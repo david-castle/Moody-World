@@ -9,6 +9,7 @@ import pandas as pd
 import requests
 import spacy
 
+from app import model_gnewsapi, model_newsapi
 from collections import Counter
 from requests.structures import CaseInsensitiveDict
 
@@ -81,6 +82,10 @@ class ProcessingFrame():
                   'Zimbabwe']
 
     def readingFrames(self):
+        na1 = model_newsapi.NewsApi()
+        na1.ScoreAndSave()
+        na2 = model_gnewsapi.GNewsApi()
+        na2.ScoreAndSave()
         print("Read all the frames.")
         file_list = glob.glob("temp/*.csv")
 
@@ -209,7 +214,7 @@ class ProcessingFrame():
         print("Assign colors for markers.")
         self.frame['Compound'] = self.frame['Compound'].astype("Float64")
         self.frame['Colors'] = self.frame.Compound.apply(self.getColors)
-        self.frame.to_csv("app/static/processed_frame.csv", index=False)
+        self.frame.to_csv("app/tmps/processed_frame.csv", index=False)
         print('Results were saved. Query processing is complete')
         print("Cleaning up.")
         for folder, subfolders, files in os.walk('temp/'):
