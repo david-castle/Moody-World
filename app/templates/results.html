@@ -76,17 +76,20 @@
             // For each row in data, create a marker and add it to the map
             // For each row, columns `Latitude`, `Longitude`, and `Title` are required  
             for (var i in data) {
+                if (!data[i])
+                    return
+
                 $(".resultList").append(`
                     <div class="resultList-item">
                         <div class="first-line">
                             <span class="colorCircle" style="background-color:${data[i].Colors}"></span> 
                             <h3><a href="${data[i].url}" target="_blank rel="noopener noreferrer">${data[i].title}</a></h3>
                         </div>
-                        <div class="second-line">${data[i].source} | ${data[i].published_on.toDateString()}</div>
+                        <div class="second-line">${data[i].source} ${data[i].published_on ? "| "  +data[i].published_on.toDateString() : ""}</div>
 
-                        <p>
+                        <div class="third-line">
                             ${data[i].description}
-                        </p>
+                        </div>
                     </div>`
                 )
             }
