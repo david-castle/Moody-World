@@ -1,4 +1,4 @@
-from cleanup import CleanUp
+import os
 from datetime import datetime
 from app import app, db, model_processing
 from app.email import send_password_reset_email
@@ -31,14 +31,12 @@ def login():
         login_user(user, remember=form.remember_me.data)
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
-            CleanUp.cleaning_processed()
             next_page = url_for('home')
         return redirect(next_page)
     return render_template('login.html', title='Sign In', form=form)
 
 @app.route('/logout')
 def logout():
-    CleanUp.cleaning_processed()
     logout_user()
     return redirect(url_for('home'))
 
