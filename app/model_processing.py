@@ -2,7 +2,6 @@ import geonamescache
 import glob
 import locationtagger
 import nltk
-import os
 import random
 import re
 import pandas as pd
@@ -10,6 +9,7 @@ import requests
 import spacy
 
 from app import model_gnewsapi, model_newsapi
+from cleanup import CleanUp
 from collections import Counter
 from requests.structures import CaseInsensitiveDict
 
@@ -216,10 +216,4 @@ class ProcessingFrame():
         self.frame['Colors'] = self.frame.Compound.apply(self.getColors)
         self.frame.to_csv("app/static/processed_frame.csv", index=False)
         print('Results were saved. Query processing is complete')
-        print("Cleaning up.")
-        for folder, subfolders, files in os.walk('temp/'):
-            for file in files:
-                if file.endswith('.csv') or file.endswith('.txt'):
-                    path = os.path.join(folder, file)
-                    print('deleted : ', path)
-                    os.remove(path)
+        CleanUp.cleaning_temps()
