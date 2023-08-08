@@ -68,7 +68,7 @@
         }
 
         // Read markers' data from data.csv
-        $.get('tmps/processed_frame.csv', function(csvString) {
+        $.get('static/processed_frame.csv', function(csvString) {
 
             // Use PapaParse to convert string to array of objects
             var data = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
@@ -120,7 +120,7 @@
     <!-- Insert HTML division tag to layout the table -->
     <div id="table"></div>
     <Script>
-        $.get('tmps/processed_frame.csv', function(csvString) {
+        $.get('static/processed_frame.csv', function(csvString) {
 
             // Use PapaParse to convert string to array of objects
             var spreadsheet = Papa.parse(csvString, {header: false, 

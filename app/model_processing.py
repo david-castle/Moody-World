@@ -214,7 +214,7 @@ class ProcessingFrame():
         print("Assign colors for markers.")
         self.frame['Compound'] = self.frame['Compound'].astype("Float64")
         self.frame['Colors'] = self.frame.Compound.apply(self.getColors)
-        self.frame.to_csv("app/tmps/processed_frame.csv", index=False)
+        self.frame.to_csv("app/static/processed_frame.csv", index=False)
         print('Results were saved. Query processing is complete')
         print("Cleaning up.")
         for folder, subfolders, files in os.walk('temp/'):
