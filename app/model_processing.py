@@ -124,7 +124,7 @@ class ProcessingFrame():
         elif 'Countries' in text.keys():
             place = text['Countries']
         else:
-            place = "London"
+            place = ["London"]
 
         try:
             #1loc = place[0]
@@ -146,7 +146,7 @@ class ProcessingFrame():
 
     def offSet(self, text):
         try:
-            return text + random.uniform(-0.5, 0.5)
+            return text + random.uniform(-1.5, 1.5)
         except:
             pass
 
@@ -195,7 +195,29 @@ class ProcessingFrame():
             return "#48f616"
         else:
             return "#14f514"
-    
+
+    def getColorsRanking(self, text):
+        if text == "#fa2525":
+            return 1
+        elif text == "#f95323":
+            return 2 
+        elif text == "#f98121":
+            return 3 
+        elif text == "#f8b01f":
+            return 4 
+        elif text == "#f8e01d":
+            return 5
+        elif text == "#dff71b":
+            return 6
+        elif text == "#adf71a":
+            return 7 
+        elif text == "#7bf618":
+            return 8 
+        elif text == "#48f616":
+            return 9 
+        else:
+            return 10 
+
     def applyToFrame(self):
         print("Create popup column text.")
         self.frame["Popup"] = self.frame.title + "\n" + self.frame.url
@@ -214,6 +236,8 @@ class ProcessingFrame():
         print("Assign colors for markers.")
         self.frame['Compound'] = self.frame['Compound'].astype("Float64")
         self.frame['Colors'] = self.frame.Compound.apply(self.getColors)
+        self.frame['Ranking'] = self.frame.Colors.apply(self.getColorsRanking)
+        self.frame.sort_values(["Ranking", "published_on"], axis=0, inplace=True)
         self.frame.to_csv("app/static/processed_frame.csv", index=False)
         print('Results were saved. Query processing is complete')
         print("Cleaning up.")
