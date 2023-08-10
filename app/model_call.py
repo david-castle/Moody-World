@@ -1,7 +1,4 @@
-import model_fox 
-import model_guardian 
-import model_nbc 
-import model_newsapi
+from app import model_newsapi, model_gnewsapi, model_processing
 
 class RunModels():
 
@@ -9,9 +6,10 @@ class RunModels():
         print("Gettin started")
 
     def modelCall(self):
-        print("Starting it")
         na1 = model_newsapi.NewsApi()
-        print("Instantiated")
-        na1.getInfo()
-        na1.createDateFrame()
-        return "done"
+        na1.ScoreAndSave()
+        na2 = model_gnewsapi.GNewsApi()
+        na2.ScoreAndSave()
+        p = model_processing.ProcessingFrame()
+        p.readingFrames()
+        p.applyToFrame()

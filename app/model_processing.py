@@ -9,7 +9,7 @@ import pandas as pd
 import requests
 import spacy
 
-from app import model_gnewsapi, model_newsapi
+from app import model_call
 from collections import Counter
 from requests.structures import CaseInsensitiveDict
 
@@ -82,10 +82,6 @@ class ProcessingFrame():
                   'Zimbabwe']
 
     def readingFrames(self):
-        na1 = model_newsapi.NewsApi()
-        na1.ScoreAndSave()
-        na2 = model_gnewsapi.GNewsApi()
-        na2.ScoreAndSave()
         print("Read all the frames.")
         file_list = glob.glob("temp/*.csv")
 
