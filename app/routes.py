@@ -1,5 +1,5 @@
 from datetime import datetime
-from app import app, db, model_processing
+from app import app, db, model_call
 from app.email import send_password_reset_email
 from app.forms import LoginForm, QueryEditForm, RegistrationForm, ResetPasswordForm, ResetPasswordRequestForm
 from app.models import User
@@ -11,6 +11,8 @@ from werkzeug.urls import url_parse
 @app.route("/")
 @app.route("/home")
 def home():
+    app.logger.info('Info level log')
+    app.logger.warning('Warning level log')
     return render_template("home.html")
 
 @app.route("/about")
@@ -26,10 +28,12 @@ def login():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
+            app.logger.info('%s failed to log in', form.username.data)
             return redirect(url_for("login"))
         login_user(user, remember=form.remember_me.data)
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
+            app.logger.info('%s logged in successfully', form.username.data)
             next_page = url_for('home')
         return redirect(next_page)
     return render_template('login.html', title='Sign In', form=form)
@@ -80,9 +84,8 @@ def processing():
         return render_template('processing.html')
 
     if request.method == 'POST':
-        p = model_processing.ProcessingFrame()
-        p.readingFrames()
-        p.applyToFrame()
+        m = model_call.RunModels()
+        m.modelCall()
         return "Done" 
 
 @app.route("/query-results", methods=["GET", "POST"])

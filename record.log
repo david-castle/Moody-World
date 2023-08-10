@@ -1,0 +1,180 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+2023-08-10 16:18:21,701 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:18:21,701 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:19:20,415 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:19:20,415 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:19:36,420 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:19:36] "[33mGET /results HTTP/1.1[0m" 404 -
+2023-08-10 16:19:46,597 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:19:46] "[33mGET /results HTTP/1.1[0m" 404 -
+2023-08-10 16:19:59,213 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:19:59] "[33mGET /results HTTP/1.1[0m" 404 -
+2023-08-10 16:20:00,795 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:20:00] "[33mGET /login?next=/results HTTP/1.1[0m" 404 -
+2023-08-10 16:20:01,679 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:20:01] "[33mGET /processing HTTP/1.1[0m" 404 -
+2023-08-10 16:20:02,460 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:20:02] "[33mGET /query HTTP/1.1[0m" 404 -
+2023-08-10 16:20:03,244 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:20:03] "[33mGET /home HTTP/1.1[0m" 404 -
+2023-08-10 16:20:04,019 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:20:04] "[33mGET /login HTTP/1.1[0m" 404 -
+2023-08-10 16:20:04,415 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:20:04] "[33mGET / HTTP/1.1[0m" 404 -
+2023-08-10 16:20:29,230 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:20:29,230 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:20:35,925 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:20:35] "[33mGET / HTTP/1.1[0m" 404 -
+2023-08-10 16:20:35,937 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:20:35] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:20:35,938 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:20:35] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-10 16:21:01,308 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:21:01,308 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:21:22,392 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:21:22,392 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:22:19,017 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:22:19,017 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:22:36,754 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:22:36] "[33mGET / HTTP/1.1[0m" 404 -
+2023-08-10 16:22:36,767 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:22:36] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:22:36,767 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:22:36] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-10 16:22:54,023 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:22:54,023 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:23:17,503 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:23:17,504 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:23:56,421 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:23:56,422 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:24:09,342 INFO app Thread-1 (process_request_thread) : Info level log
+2023-08-10 16:24:09,343 WARNING app Thread-1 (process_request_thread) : Warning level log
+2023-08-10 16:24:09,363 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:24:09] "GET / HTTP/1.1" 200 -
+2023-08-10 16:24:09,373 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:24:09] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:24:09,373 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:24:09] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-10 16:24:12,364 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:24:12] "[32mGET /results HTTP/1.1[0m" 302 -
+2023-08-10 16:24:12,382 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:24:12] "GET /login?next=/results HTTP/1.1" 200 -
+2023-08-10 16:24:12,393 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:24:12] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:24:16,865 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:24:16] "[32mPOST /login?next=/results HTTP/1.1[0m" 302 -
+2023-08-10 16:24:16,877 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:24:16] "GET /results HTTP/1.1" 200 -
+2023-08-10 16:24:16,881 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:24:16] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:24:16,914 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:24:16] "[36mGET /static/processed_frame.csv HTTP/1.1[0m" 304 -
+2023-08-10 16:24:51,254 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:24:51,254 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:25:11,155 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:25:11,155 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:25:18,917 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:25:18] "[32mGET /results HTTP/1.1[0m" 302 -
+2023-08-10 16:25:18,948 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:25:18] "GET /login?next=/results HTTP/1.1" 200 -
+2023-08-10 16:25:18,959 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:25:18] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:25:23,155 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:25:23] "[32mPOST /login?next=/results HTTP/1.1[0m" 302 -
+2023-08-10 16:25:23,167 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:25:23] "GET /results HTTP/1.1" 200 -
+2023-08-10 16:25:23,171 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:25:23] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:25:23,188 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:25:23] "[36mGET /static/processed_frame.csv HTTP/1.1[0m" 304 -
+2023-08-10 16:25:23,189 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:25:23] "[36mGET /static/processed_frame.csv HTTP/1.1[0m" 304 -
+2023-08-10 16:25:56,619 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:25:56,619 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:26:12,040 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:26:12] "[33mGET /results HTTP/1.1[0m" 404 -
+2023-08-10 16:26:47,917 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:26:47,917 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:26:56,159 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:26:56] "[33mPOST /login?next=/results HTTP/1.1[0m" 404 -
+2023-08-10 16:27:00,719 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:27:00] "[33mPOST /login?next=/results HTTP/1.1[0m" 404 -
+2023-08-10 16:27:16,920 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:27:16] "[33mGET / HTTP/1.1[0m" 404 -
+2023-08-10 16:27:16,932 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:27:16] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:27:16,933 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:27:16] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-10 16:27:57,069 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:27:57,069 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:28:03,488 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:28:03] "[33mPOST /login?next=/results HTTP/1.1[0m" 404 -
+2023-08-10 16:28:05,111 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:28:05] "[33mGET /login?next=/results HTTP/1.1[0m" 404 -
+2023-08-10 16:28:10,634 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:28:10] "[33mGET /login HTTP/1.1[0m" 404 -
+2023-08-10 16:28:28,301 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:28:28,301 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:28:43,779 INFO app Thread-1 (process_request_thread) : Info level log
+2023-08-10 16:28:43,779 WARNING app Thread-1 (process_request_thread) : Warning level log
+2023-08-10 16:28:43,799 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:28:43] "GET / HTTP/1.1" 200 -
+2023-08-10 16:28:43,811 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:28:43] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:28:43,812 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:28:43] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-10 16:28:43,813 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:28:43] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:28:43,814 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:28:43] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-10 16:28:45,836 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:28:45] "[32mGET /query HTTP/1.1[0m" 302 -
+2023-08-10 16:28:45,859 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:28:45] "GET /login?next=/query HTTP/1.1" 200 -
+2023-08-10 16:28:45,871 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:28:45] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:28:50,558 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:28:50] "[32mPOST /login?next=/query HTTP/1.1[0m" 302 -
+2023-08-10 16:28:50,570 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:28:50] "GET /query HTTP/1.1" 200 -
+2023-08-10 16:28:50,574 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:28:50] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:30:43,395 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:30:43,395 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:30:57,375 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:30:57] "[32mGET /results HTTP/1.1[0m" 302 -
+2023-08-10 16:30:57,410 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:30:57] "GET /login?next=/results HTTP/1.1" 200 -
+2023-08-10 16:30:57,421 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:30:57] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:31:01,952 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:31:01] "[32mPOST /login?next=/results HTTP/1.1[0m" 302 -
+2023-08-10 16:31:01,966 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:31:01] "GET /results HTTP/1.1" 200 -
+2023-08-10 16:31:01,971 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:31:01] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:31:01,987 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:31:01] "[36mGET /static/processed_frame.csv HTTP/1.1[0m" 304 -
+2023-08-10 16:31:01,988 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:31:01] "[36mGET /static/processed_frame.csv HTTP/1.1[0m" 304 -
+2023-08-10 16:31:04,133 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:31:04] "[32mGET /logout HTTP/1.1[0m" 302 -
+2023-08-10 16:31:04,141 INFO app Thread-10 (process_request_thread) : Info level log
+2023-08-10 16:31:04,141 WARNING app Thread-10 (process_request_thread) : Warning level log
+2023-08-10 16:31:04,149 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:31:04] "GET /home HTTP/1.1" 200 -
+2023-08-10 16:31:04,165 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:31:04] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:31:04,167 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:31:04] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-10 16:35:11,709 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:35:11,709 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:35:30,161 INFO app Thread-1 (process_request_thread) : Info level log
+2023-08-10 16:35:30,162 WARNING app Thread-1 (process_request_thread) : Warning level log
+2023-08-10 16:35:30,179 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:35:30] "GET / HTTP/1.1" 200 -
+2023-08-10 16:35:30,186 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:35:30] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-10 16:35:30,189 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:35:30] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:35:30,191 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:35:30] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:35:30,191 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:35:30] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-10 16:35:32,524 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:35:32] "GET /login HTTP/1.1" 200 -
+2023-08-10 16:35:32,534 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:35:32] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:35:38,656 ERROR app Thread-8 (process_request_thread) : Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 31, in login
+    app.logger.info('%s failed to log in', user.username)
+                                           ^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'username'
+2023-08-10 16:35:38,659 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:35:38] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2023-08-10 16:36:09,731 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:36:09,731 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:36:14,442 INFO flask_wtf.csrf Thread-1 (process_request_thread) : The CSRF token is invalid.
+2023-08-10 16:36:14,465 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:36:14] "POST /login HTTP/1.1" 200 -
+2023-08-10 16:36:14,477 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:36:14] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:36:41,645 INFO app Thread-3 (process_request_thread) : None failed to log in
+2023-08-10 16:36:41,647 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:36:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+2023-08-10 16:36:41,657 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:36:41] "GET /login HTTP/1.1" 200 -
+2023-08-10 16:36:41,667 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:36:41] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:38:12,017 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-10 16:38:12,017 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-10 16:38:20,148 INFO flask_wtf.csrf Thread-1 (process_request_thread) : The CSRF token is invalid.
+2023-08-10 16:38:20,175 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:38:20] "POST /login HTTP/1.1" 200 -
+2023-08-10 16:38:20,185 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:38:20] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:38:23,733 INFO app Thread-3 (process_request_thread) : admin failed to log in
+2023-08-10 16:38:23,734 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:38:23] "[32mPOST /login HTTP/1.1[0m" 302 -
+2023-08-10 16:38:23,742 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:38:23] "GET /login HTTP/1.1" 200 -
+2023-08-10 16:38:23,746 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:38:23] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:38:53,458 INFO app Thread-6 (process_request_thread) : Emily logged in successfully
+2023-08-10 16:38:53,459 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:38:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2023-08-10 16:38:53,474 INFO app Thread-7 (process_request_thread) : Info level log
+2023-08-10 16:38:53,474 WARNING app Thread-7 (process_request_thread) : Warning level log
+2023-08-10 16:38:53,477 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:38:53] "GET /home HTTP/1.1" 200 -
+2023-08-10 16:38:53,482 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:38:53] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-10 16:38:53,482 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [10/Aug/2023 16:38:53] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
