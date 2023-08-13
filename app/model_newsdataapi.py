@@ -5,34 +5,52 @@ import urllib
 from datetime import datetime, date, timedelta
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
-class GNewsApi():
+class NewsDataApi():
     def __init__(self):
         print("NewsDataAPI instantiated.")
 
     def getInfo(self):
         print("NewsDataAPI: Get the base info...")  
         # Init
-        file1 = open("temp/searchterms.txt","r+")
-        term = "".join(file1.readline()).split(', ')
+        try:
+            file1 = open("temp/AnySearchterms.txt","r+")
+            term = "".join(file1.readline()).split(', ')
+            keywords = self.convertAllWords(term)
+            if len(keywords) < 1:
+                raise Exception("No words given.")
+            articles = self.callAPI(keywords)
+        except:
+            file2 = open("temp/AllSearchterms.txt", "r+")
+            term = "".join(file2.readline()).split(', ')
+            keywords = self.convertAnyWords(term)
+            articles = self.callAPI(keywords)
+        return articles
+    
+    def callAPI(self, keywords):
         base_url = "https://newsdata.io/api/1/news?"
-        keywords = self.convertKeyWords(term)
         language = "&lang=en"
         max_return = "&max=10" #default for free plan is 10
         #from_date = "&from-date=" + str(default_date)
         apikey = "apikey=pub_27238b44ca178461c62ff294307456683f97f&q="
-        url = base_url + apikey + keywords
-        with urllib.request.urlopen(url) as response:
-            data = json.loads(response.read().decode("utf-8"))
-            all_articles = data["articles"]
+        for word in keywords:
+            url = base_url + apikey + keywords
+            with urllib.request.urlopen(url) as response:
+                data = json.loads(response.read().decode("utf-8"))
+                articles = data["articles"]
+                all_articles = {**all_articles, **articles}
         return all_articles
 
-    def convertKeyWords(self, wordList):
+    def convertAllWords(self, wordList):
         wordLower = [x.lower() for x in wordList]
         if len(wordLower) > 1:
             keywords = '%20AND%20'.join(wordLower)
             return keywords
         else:
             return str(wordLower[0])
+
+    def convertAnyWords(self, wordList):
+        wordLower = [x.lower() for x in wordList]
+        return wordLower
 
     def sentimentScores(self, text):
         # Create sentiment intensity analyzer object

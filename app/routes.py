@@ -69,10 +69,14 @@ def results():
 def query_add_page():
     form = QueryEditForm()
     if request.method == 'POST':
-        file = open('temp/searchterms.txt', 'w')
-        s = form.searchterms.data
-        file.write(s)
-        file.close()
+        file_y = open('temp/AnySearchterms.txt', 'w')
+        file_l = open('temp/AllSearchterms.txt', 'w')
+        san = form.searchtermsAny.data
+        sal = form.searchtermsAll.data
+        file_y.write(san)
+        file_y.close()
+        file_l.write(sal)
+        file_l.close()
         return redirect(url_for("processing"))
     return render_template("query.html", form=form)
 
