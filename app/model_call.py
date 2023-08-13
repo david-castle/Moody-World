@@ -3,7 +3,7 @@ from app import model_newsapi, model_gnewsapi, model_processing
 class RunModels():
 
     def __init__(self):
-        print("Gettin started")
+        print("Call API models.")
 
     def modelCall(self):
         na1 = model_newsapi.NewsApi()

@@ -1,6 +1,7 @@
 import json
 import pandas as pd
 import requests
+import time
 import urllib
 from datetime import datetime, date, timedelta
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
@@ -11,28 +12,48 @@ class GNewsApi():
 
     def getInfo(self):
         print("GNewsAPI: Get the base info...")  
-        # Init
-        file1 = open("temp/searchterms.txt","r+")
-        term = "".join(file1.readline()).split(', ')
+        try:
+            file1 = open("temp/AnySearchterms.txt","r+")
+            term = "".join(file1.readline()).split(', ')
+            keywords = [self.convertAllWords(term)]
+            if len(keywords) < 1:
+                raise Exception("No words given.")
+            articles = self.callAPI(keywords)
+        except:
+            file2 = open("temp/AllSearchterms.txt", "r+")
+            term = "".join(file2.readline()).split(', ')
+            keywords = self.convertAnyWords(term)
+            articles = self.callAPI(keywords)
+        return articles
+
+    def callAPI(self, keywords):
         base_url = "https://gnews.io/api/v4/search?q="
-        keywords = self.convertKeyWords(term)
         language = "&lang=en"
         max_return = "&max=10" #default for free plan is 10
         #from_date = "&from-date=" + str(default_date)
         apikey = "&apikey=09fc1663f2898e244bd33b4cc76c254c"
-        url = base_url + keywords + language + max_return + apikey
-        with urllib.request.urlopen(url) as response:
-            data = json.loads(response.read().decode("utf-8"))
-            all_articles = data["articles"]
+        all_articles = []
+        for word in keywords:
+            url = base_url + word + language + max_return + apikey
+            with urllib.request.urlopen(url) as response:
+                data = json.loads(response.read().decode("utf-8"))
+                articles = data["articles"]
+                for i in articles:
+                    all_articles.append(i)
+            time.sleep(2)
         return all_articles
 
-    def convertKeyWords(self, wordList):
+    def convertAllWords(self, wordList):
         wordLower = [x.lower() for x in wordList]
         if len(wordLower) > 1:
             keywords = '%20AND%20'.join(wordLower)
             return keywords
         else:
             return str(wordLower[0])
+
+    def convertAnyWords(self, wordList):
+        words = [x.lower() for x in [x.strip() for x in wordList]][0].split()
+        return words
 
     def sentimentScores(self, text):
         # Create sentiment intensity analyzer object

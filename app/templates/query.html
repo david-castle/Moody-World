@@ -20,11 +20,23 @@
 
 
     <div class="field">
-        <label for="searchterms" class="label">Search Terms</label>
+        <label for="searchtermsAny" class="label">Match Any of These Terms</label>
         <div class="control">
-            {{ form.searchterms(required=True, autofocus=True, class='input') }}
+            {{ form.searchtermsAny(autofocus=True, class='input') }}
         </div>
-        {% for error in form.searchterms.errors %}
+        {% for error in form.searchtermsAny.errors %}
+        <p class="help has-background-warning">
+            {{ error }}
+        </p>
+        {% endfor %}
+    </div>
+
+    <div class="field">
+        <label for="searchtermsAll" class="label">Match All of These Terms</label>
+        <div class="control">
+            {{ form.searchtermsAll(autofocus=True, class='input') }}
+        </div>
+        {% for error in form.searchtermsAll.errors %}
         <p class="help has-background-warning">
             {{ error }}
         </p>

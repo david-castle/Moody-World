@@ -10,8 +10,15 @@ class NewsApi():
     def getInfo(self):
         print("NewsAPI: Gett the base info...")  
         # Init
-        file1 = open("temp/searchterms.txt","r+")
-        term = "".join(file1.readline())
+        try:
+            file1 = open("temp/Anysearchterms.txt","r+")
+            term = "".join(file1.readline())
+            if len(term) < 1:
+                raise Exception("No words given.")
+        except:
+            file2 = open("temp/AllSearchterms.txt", "r+")
+            term = "".join(file2.readline()).split(', ')
+            print("all: ", term)
         print(term)
         #keywords = self.convertKeyWords(term)
         #print(keywords)

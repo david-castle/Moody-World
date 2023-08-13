@@ -80,6 +80,63 @@ class ProcessingFrame():
                   'United States Minor Outlying Islands', 'Uruguay', 'Uzbekistan', 'Vanuatu', 'Vatican', 
                   'Venezuela', 'Vietnam', 'Wallis and Futuna', 'Western Sahara', 'Yemen', 'Zambia', 
                   'Zimbabwe']
+    
+    country_adjectives = {'Afghan':'Afghanistan', 'Algerian':'Algeria', 'Angolan':'Angola', 'Argentine':'Argentina',
+                            'Austrian':'Austria', 'Australian':'Australia', 'Bangladeshi':'Bangladesh',
+                            'Belarusian':'Belarus', 'Belgian':'Belgium', 'Bolivian':'Bolivia', 'Bosnian':'Bosnia', 
+                            'Herzegovinian': 'Herzegovina', 'Brazilian':'Brazil', 'British':'Britain', 'Bulgarian':'Bulgaria',
+                            'Cambodian':'Cambodia', 'Cameroonian':'Cameroon', 'Canadian':'Canada', 
+                            'Central African':'Central African Republic', 'Chadian':'Chad', 'Chinese':'China',
+                            'Colombian':'Colombia', 'Costa Rican':'Costa Rica', 'Croatian':'Croatia', 'Czech':'the Czech Republic',
+                            'Congolese':'Democratic Republic of the Congo', 'Danish':'Denmark', 'Ecuadorian':'Ecuador',
+                            'Egyptian':'Egypt', 'Salvadoran':'El Salvador', 'English':'England', 'Estonian':'Estonia',
+                            'Ethiopian':'Ethiopia', 'Finnish':'Finland', 'French':'France', 'German':'Germany',
+                            'Ghanaian':'Ghana', 'Greek':'Greece', 'Guatemalan':'Guatemala', 'Dutch':'Holland',
+                            'Honduran':'Honduras', 'Hungarian':'Hungary', 'Icelandic':'Iceland', 'Indian':'India',
+                            'Indonesian':'Indonesia', 'Iranian':'Iran', 'Iraqi':'Iraq', 'Irish':'Ireland', 'Israeli':'Israel',
+                            'Italian':'Italy', 'Ivorian':'Ivory Coast', 'Jamaican':'Jamaica', 'Japanese':'Japan',
+                            'Jordanian':'Jordan', 'Kazakh':'Kazakhstan', 'Kenyan':'Kenya', 'Lao':'Laos', 'Latvian':'Latvia',
+                            'Libyan':'Libya', 'Lithuanian':'Lithuania', 'Malagasy':'Madagascar', 'Malaysian':'Malaysia',
+                            'Malian':'Mali', 'Mauritanian':'Mauritania', 'Mexican':'Mexico', 'Moroccan':'Morocco',
+                            'Namibian':'Namibia', 'New Zealand':'New Zealand', 'Nicaraguan':'Nicaragua', 'Nigerien':'Niger',
+                            'Nigerian':'Nigeria', 'Norwegian':'Norway', 'Omani':'Oman', 'Pakistani':'Pakistan',
+                            'Panamanian':'Panama', 'Paraguayan':'Paraguay', 'Peruvian':'Peru', 'Philippine':'The Philippines',
+                            'Polish':'Poland', 'Portuguese':'Portugal', 'Congolese':'Republic of the Congo',
+                            'Romanian':'Romania', 'Russian':'Russia', 'Saudi':'Saudi Arabia', 'Scottish':'Scotland',
+                            'Senegalese':'Senegal', 'Serbian':'Serbia', 'Singaporean':'Singapore', 'Slovak':'Slovakia',
+                            'Somalian':'Somalia', 'South African':'South Africa', 'Spanish':'Spain', 'Sudanese':'Sudan',
+                            'Swedish':'Sweden', 'Swiss':'Switzerland', 'Syrian':'Syria', 'Thai':'Thailand', 'Tunisian':'Tunisia',
+                            'Turkish':'Turkey', 'Turkmen':'Turkmenistan', 'Ukranian':'Ukraine', 'Emirati':'United Arab Emirates',
+                            'American':'United States', 'Uruguayan':'Uruguay', 'Vietnamese':'Vietnam', 'Welsh':'Wales',
+                            'Zambian':'Zambia', 'Zimbabwean':'Zimbabwe',
+                            'Afghans':'Afghanistan', 'Algerians':'Algeria', 'Angolans':'Angola', 'Argentines':'Argentina',
+                            'Austrians':'Austria', 'Australians':'Australia', 'Bangladeshis':'Bangladesh',
+                            'Belarusians':'Belarus', 'Belgians':'Belgium', 'Bolivians':'Bolivia', 'Bosnians':'Bosnia', 
+                            'Herzegovinians': 'Herzegovina', 'Brazilians':'Brazil', 'Britishs':'Britain', 'Bulgarians':'Bulgaria',
+                            'Cambodians':'Cambodia', 'Cameroonians':'Cameroon', 'Canadians':'Canada', 
+                            'Central Africans':'Central African Republic', 'Chadians':'Chad', 'Chinese':'China',
+                            'Colombians':'Colombia', 'Costa Ricans':'Costa Rica', 'Croatians':'Croatia', 'Czechs':'the Czech Republic',
+                            'Congolese':'Democratic Republic of the Congo', 'Danish':'Denmark', 'Ecuadorians':'Ecuador',
+                            'Egyptians':'Egypt', 'Salvadorans':'El Salvador', 'English':'England', 'Estonians':'Estonia',
+                            'Ethiopians':'Ethiopia', 'Finnish':'Finland', 'French':'France', 'Germans':'Germany',
+                            'Ghanaians':'Ghana', 'Greek':'Greece', 'Guatemalans':'Guatemala', 'Dutch':'Holland',
+                            'Hondurans':'Honduras', 'Hungarians':'Hungary', 'Icelandic':'Iceland', 'Indians':'India',
+                            'Indonesians':'Indonesia', 'Iranians':'Iran', 'Iraqis':'Iraq', 'Irish':'Ireland', 'Israelis':'Israel',
+                            'Italians':'Italy', 'Ivorians':'Ivory Coast', 'Jamaicans':'Jamaica', 'Japanese':'Japan',
+                            'Jordanians':'Jordan', 'Kazakhs':'Kazakhstan', 'Kenyans':'Kenya', 'Laos':'Laos', 'Latvians':'Latvia',
+                            'Libyans':'Libya', 'Lithuanians':'Lithuania', 'Malagasys':'Madagascar', 'Malaysians':'Malaysia',
+                            'Malians':'Mali', 'Mauritanians':'Mauritania', 'Mexicans':'Mexico', 'Moroccans':'Morocco',
+                            'Namibians':'Namibia', 'New Zealanders':'New Zealand', 'Nicaraguans':'Nicaragua', 'Nigeriens':'Niger',
+                            'Nigerians':'Nigeria', 'Norwegians':'Norway', 'Omanis':'Oman', 'Pakistanis':'Pakistan',
+                            'Panamanians':'Panama', 'Paraguayans':'Paraguay', 'Peruvians':'Peru', 'Philippinos':'The Philippines',
+                            'Polish':'Poland', 'Portuguese':'Portugal', 'Congolese':'Republic of the Congo',
+                            'Romanians':'Romania', 'Russians':'Russia', 'Saudis':'Saudi Arabia', 'Scottish':'Scotland',
+                            'Senegaleses':'Senegal', 'Serbiasn':'Serbia', 'Singaporeans':'Singapore', 'Slovaks':'Slovakia',
+                            'Somalians':'Somalia', 'South Africans':'South Africa', 'Spanish':'Spain', 'Sudaneses':'Sudan',
+                            'Swedish':'Sweden', 'Swiss':'Switzerland', 'Syrians':'Syria', 'Thais':'Thailand', 'Tunisians':'Tunisia',
+                            'Turkish':'Turkey', 'Turkmens':'Turkmenistan', 'Ukranians':'Ukraine', 'Emiratis':'United Arab Emirates',
+                            'Americans':'United States', 'Uruguayans':'Uruguay',
+                            'Zambians':'Zambia', 'Zimbabweans':'Zimbabwe'}
 
     def readingFrames(self):
         print("Read all the frames.")
@@ -97,30 +154,50 @@ class ProcessingFrame():
 
     def getLocationNames(self, text_in):
         # extracting entities.
-        text = re.sub(r"[^a-zA-Z0-9 ]", "", text_in)
-        locationNames = {'Countries': ['Peru']}
-        place_entity = locationtagger.find_locations(text = text)
-        for i in range(len(place_entity.cities)):
-            if len(self.gc.get_cities_by_name(str(i))) >= 1:
-                locationNames['Cities'] = place_entity.cities
+        text = re.sub(r"[^a-zA-Z0-9 ]", " ", text_in)
+        doc = self.nlp(text)
+        # all tokens that arent stop words or punctuations
+        words = [token.text
+                for token in doc
+                if not token.is_stop and not token.is_punct]
+        for key, value in self.country_adjectives.items():
+            for i in words:
+                if i == key:
+                    words.append(value)
+        text = " ".join(words)
+        locationNames = []
+        for doc in self.nlp.pipe(words, disable=["tok2vec", "tagger", "parser", "attribute_ruler", "lemmatizer"]):
+            # Find GPE within text and append to list for gelocation
+            place = [ent.text for ent in doc.ents if ent.label_ == "GPE"]
+            if len(place) > 0:
+                locationNames.append([ent.text for ent in doc.ents if ent.label_ == "GPE"][0])    
             else:
-                pass
-        for i in range(len(place_entity.countries)):
-            if len(place_entity.countries) > 0:
-                for country in place_entity.countries:
-                    if country in self.countries_list:
-                        locationNames['Countries'] = place_entity.countries   
-                    else:
-                        pass
+                pass      
+        # place_entity = locationtagger.find_locations(text = text)
+        # for i in range(len(place_entity.cities)):
+        #     if len(place_entity.cities) >= 1:
+        #         locationNames['Cities'] = [place_entity.cities[0]]
+        #     else:
+        #         pass
+        # for i in range(len(place_entity.countries)):
+        #     if len(place_entity.countries) > 0:
+        #         for country in place_entity.countries:
+        #             if country in self.countries_list:
+        #                 locationNames['Countries'] = [place_entity.countries[0]] 
+        #             else:
+        #                 pass
         return locationNames
 
     def getCoordinates(self, text):
-        if 'Cities' in text.keys():
-            place = text['Cities']
-        elif 'Countries' in text.keys():
-            place = text['Countries']
-        else:
+        print(len(text))
+        if len(text) < 1: 
             place = ["London"]
+            #print(place)
+        elif text[0] == "UK":
+            place = ["England"]
+        else:
+            place = [text[0]]
+            print(place)
 
         try:
             #1loc = place[0]

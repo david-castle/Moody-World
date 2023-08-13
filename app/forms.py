@@ -13,7 +13,21 @@ class LoginForm(FlaskForm):
 
 class QueryEditForm(FlaskForm):
     #name = StringField("Query Name", validators=[DataRequired()])
-    searchterms = StringField("Search Terms", validators=[DataRequired()])
+    searchtermsAny = StringField("Match Any of These Terms")#, validators=[DataRequired()])
+    searchtermsAll = StringField("Match All of These Terms")#, validators=[DataRequired()])
+    
+    def validate(self, extra_validators=None):
+        if super().validate(extra_validators):
+
+            # your logic here e.g.
+            if not (self.searchtermsAny.data or self.searchtermsAll.data):
+                self.searchtermsAny.errors.append('At least one field must have a value')
+                return False
+            else:
+                return True
+
+        return False
+    
     #number_results = IntegerField(
     #    "number_results",
     #    validators=[
@@ -23,6 +37,8 @@ class QueryEditForm(FlaskForm):
     #)
 
 class RegistrationForm(FlaskForm):
+    firstname = StringField('First Name', validators=[DataRequired()])
+    lastname = StringField('Last Name', validators=[DataRequired()])
     username = StringField('Username', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
