@@ -1,9 +1,16 @@
 from app.models import User
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
 from wtforms_components import IntegerField
 from wtforms.validators import (DataRequired, Email, EqualTo, Optional, 
                                 NumberRange, ValidationError)
+
+class ContactForm(FlaskForm):
+    name = StringField("Name", validators=[DataRequired(message="Please enter your name")])
+    email = StringField("Email", validators=[DataRequired(message="Please enter your email"), Email()])
+    subject = StringField("Subject", validators=[DataRequired(message="Please enter a subject for your message")])
+    message = TextAreaField("Message", validators=[DataRequired(message="Please enter your message")])
+    submit = SubmitField("Send") 
 
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
@@ -18,24 +25,13 @@ class QueryEditForm(FlaskForm):
     
     def validate(self, extra_validators=None):
         if super().validate(extra_validators):
-
-            # your logic here e.g.
             if not (self.searchtermsAny.data or self.searchtermsAll.data):
                 self.searchtermsAny.errors.append('At least one field must have a value')
                 return False
             else:
                 return True
-
         return False
     
-    #number_results = IntegerField(
-    #    "number_results",
-    #    validators=[
-    #        Optional(),
-    #        NumberRange(min=1, max=100)
-    #    ]
-    #)
-
 class RegistrationForm(FlaskForm):
     firstname = StringField('First Name', validators=[DataRequired()])
     lastname = StringField('Last Name', validators=[DataRequired()])
