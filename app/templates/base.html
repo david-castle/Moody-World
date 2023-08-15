@@ -29,6 +29,9 @@
             <a class="button is-link" href="{{ url_for('results') }}">Results</a>
           </span>
           <span class="navbar-item">
+            <a class="button is-link" href="{{ url_for('contact') }}">Contact Us</a>
+          </span>
+          <span class="navbar-item">
             {% if current_user.is_anonymous %}
             <a class="button is-link" href="{{ url_for('login') }}">Login</a>
             {% else %}

@@ -4337,3 +4337,204 @@ jinja2.exceptions.UndefinedError: 'app.forms.QueryEditForm object' has no attrib
 2023-08-13 12:34:11,698 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [13/Aug/2023 12:34:11] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
 2023-08-13 12:34:33,051 INFO werkzeug MainThread :  * Detected change in '/Users/davidcastle/Documents/workspace/Moody-World/app/model_processing.py', reloading
 2023-08-13 12:34:33,310 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-15 15:36:29,656 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 15:36:29,657 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 15:37:03,174 INFO app Thread-1 (process_request_thread) : Info level log
+2023-08-15 15:37:03,174 WARNING app Thread-1 (process_request_thread) : Warning level log
+2023-08-15 15:37:03,192 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:37:03] "GET / HTTP/1.1" 200 -
+2023-08-15 15:37:03,206 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:37:03] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 15:37:03,206 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:37:03] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-15 15:37:03,334 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:37:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-08-15 15:37:06,359 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:37:06] "GET /contact HTTP/1.1" 200 -
+2023-08-15 15:37:06,373 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:37:06] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 15:42:13,031 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:42:13] "GET /contact HTTP/1.1" 200 -
+2023-08-15 15:42:13,037 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:42:13] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 15:42:14,405 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:42:14] "GET /contact HTTP/1.1" 200 -
+2023-08-15 15:42:14,410 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:42:14] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 15:42:23,544 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 15:42:23,544 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 15:42:26,280 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:42:26] "GET /contact HTTP/1.1" 200 -
+2023-08-15 15:42:26,289 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:42:26] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 15:44:34,601 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:44:34] "GET /contact HTTP/1.1" 200 -
+2023-08-15 15:44:34,608 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:44:34] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-15 15:47:21,663 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:47:21] "GET /contact HTTP/1.1" 200 -
+2023-08-15 15:47:21,668 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:47:21] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-15 15:48:35,881 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:48:35] "GET /contact HTTP/1.1" 200 -
+2023-08-15 15:48:35,888 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:48:35] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-15 15:50:06,232 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:50:06] "GET /contact HTTP/1.1" 200 -
+2023-08-15 15:50:06,238 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:50:06] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 15:50:14,591 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 15:50:14,591 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 15:50:17,236 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:50:17] "GET /contact HTTP/1.1" 200 -
+2023-08-15 15:50:17,242 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:50:17] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 15:50:58,616 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 15:50:58,616 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 15:51:00,979 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:51:00] "GET /contact HTTP/1.1" 200 -
+2023-08-15 15:51:00,984 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:51:00] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-15 15:51:27,784 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 15:51:27,784 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 15:51:30,080 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:51:30] "GET /contact HTTP/1.1" 200 -
+2023-08-15 15:51:30,090 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:51:30] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-15 15:52:07,386 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 15:52:07,386 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 15:52:09,949 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:52:09] "GET /contact HTTP/1.1" 200 -
+2023-08-15 15:52:09,959 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:52:09] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-15 15:52:12,490 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:52:12] "GET /about HTTP/1.1" 200 -
+2023-08-15 15:52:12,499 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:52:12] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 15:52:13,637 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:52:13] "GET /contact HTTP/1.1" 200 -
+2023-08-15 15:52:13,647 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:52:13] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 15:55:32,964 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 15:55:32,964 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 15:55:35,754 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:55:35] "GET /contact HTTP/1.1" 200 -
+2023-08-15 15:55:35,764 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:55:35] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 15:57:09,039 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 15:57:09,039 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 15:57:11,785 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:57:11] "GET /contact HTTP/1.1" 200 -
+2023-08-15 15:57:11,793 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:57:11] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-15 15:58:24,077 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 15:58:24,077 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 15:58:27,430 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:58:27] "GET /contact HTTP/1.1" 200 -
+2023-08-15 15:58:27,438 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:58:27] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-15 15:58:28,911 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:58:28] "GET /contact HTTP/1.1" 200 -
+2023-08-15 15:58:28,917 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:58:28] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 15:59:15,614 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 15:59:15,614 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 15:59:19,063 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:59:19] "GET /contact HTTP/1.1" 200 -
+2023-08-15 15:59:19,071 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 15:59:19] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-15 16:06:59,374 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 16:06:59,374 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 16:07:05,540 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:07:05] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:07:05,545 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:07:05] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-15 16:08:30,868 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 16:08:30,868 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 16:08:32,577 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:08:32] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:08:32,585 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:08:32] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-15 16:08:34,991 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:08:34] "GET /about HTTP/1.1" 200 -
+2023-08-15 16:08:34,999 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:08:34] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 16:08:35,950 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:08:35] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:08:35,958 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:08:35] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 16:12:43,434 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:12:43] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:12:52,322 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 16:12:52,322 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 16:12:55,659 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:12:55] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:12:55,664 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:12:55] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 16:26:16,360 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 16:26:16,360 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 16:26:20,177 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:26:20] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:26:20,184 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:26:20] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 16:30:03,343 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 16:30:03,343 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 16:30:05,819 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:30:05] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:30:05,824 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:30:05] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-15 16:30:07,220 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:30:07] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:30:07,232 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:30:07] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 16:30:49,067 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 16:30:49,067 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 16:30:51,684 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:30:51] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:30:51,690 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:30:51] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-15 16:32:04,544 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 16:32:04,544 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 16:33:13,568 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 16:33:13,568 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 16:33:13,568 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-15 16:33:15,630 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-15 16:33:15,640 INFO werkzeug MainThread :  * Debugger PIN: 193-571-962
+2023-08-15 16:33:23,891 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:33:23] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:33:23,902 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:33:23] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-15 16:34:40,822 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:34:40] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:34:40,828 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:34:40] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 16:34:51,268 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 16:34:51,268 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 16:34:51,268 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-15 16:34:53,219 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-15 16:34:53,227 INFO werkzeug MainThread :  * Debugger PIN: 193-571-962
+2023-08-15 16:34:56,113 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:34:56] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:34:56,120 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:34:56] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 16:38:36,110 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:38:36] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:38:36,117 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:38:36] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 16:42:32,915 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 16:42:32,915 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 16:42:32,915 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-15 16:42:35,248 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-15 16:42:35,256 INFO werkzeug MainThread :  * Debugger PIN: 193-571-962
+2023-08-15 16:42:35,681 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:42:35] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:42:35,687 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:42:35] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 16:43:54,984 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:43:54] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:43:54,989 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:43:54] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 16:44:04,602 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 16:44:04,602 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 16:44:04,602 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-15 16:44:06,665 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-15 16:44:06,673 INFO werkzeug MainThread :  * Debugger PIN: 193-571-962
+2023-08-15 16:44:07,451 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:44:07] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:44:07,456 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:44:07] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 16:45:49,953 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:45:49] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:45:49,959 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:45:49] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 16:45:51,189 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:45:51] "POST /contact HTTP/1.1" 200 -
+2023-08-15 16:45:51,195 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:45:51] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 16:48:14,357 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 16:48:14,357 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 16:48:14,357 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-15 16:48:16,405 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-15 16:48:16,415 INFO werkzeug MainThread :  * Debugger PIN: 193-571-962
+2023-08-15 16:48:21,370 INFO flask_wtf.csrf Thread-2 (process_request_thread) : The CSRF token is invalid.
+2023-08-15 16:48:21,387 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:48:21] "POST /contact HTTP/1.1" 200 -
+2023-08-15 16:48:21,396 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:48:21] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-15 16:48:25,604 INFO flask_wtf.csrf Thread-4 (process_request_thread) : The CSRF token is invalid.
+2023-08-15 16:48:25,608 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:48:25] "POST /contact HTTP/1.1" 200 -
+2023-08-15 16:48:25,620 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:48:25] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 16:48:33,299 INFO flask_wtf.csrf Thread-6 (process_request_thread) : The CSRF token is invalid.
+2023-08-15 16:48:33,302 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:48:33] "POST /contact HTTP/1.1" 200 -
+2023-08-15 16:48:33,311 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:48:33] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 16:48:34,429 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:48:34] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:48:34,439 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:48:34] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 16:48:51,106 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:48:51] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:48:51,111 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:48:51] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-15 16:48:57,615 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 16:48:57,615 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 16:48:57,615 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-15 16:48:59,699 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-15 16:48:59,709 INFO werkzeug MainThread :  * Debugger PIN: 193-571-962
+2023-08-15 16:49:00,840 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:49:00] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:49:00,845 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:49:00] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-15 16:51:10,358 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 16:51:10,358 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 16:51:10,358 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-15 16:51:12,382 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-15 16:51:12,392 INFO werkzeug MainThread :  * Debugger PIN: 193-571-962
+2023-08-15 16:51:13,295 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:51:13] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:51:13,301 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:51:13] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-15 16:53:10,720 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-15 16:53:10,720 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-15 16:53:10,720 INFO werkzeug MainThread :  * Restarting with stat
+2023-08-15 16:53:13,281 WARNING werkzeug MainThread :  * Debugger is active!
+2023-08-15 16:53:13,289 INFO werkzeug MainThread :  * Debugger PIN: 193-571-962
+2023-08-15 16:53:13,336 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:53:13] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:53:13,346 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:53:13] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-15 16:53:15,452 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:53:15] "GET /contact HTTP/1.1" 200 -
+2023-08-15 16:53:15,458 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:53:15] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -

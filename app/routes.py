@@ -1,7 +1,7 @@
 from datetime import datetime
-from app import app, db, model_call
+from app import app, db, model_call, mail
 from app.email import send_password_reset_email
-from app.forms import LoginForm, QueryEditForm, RegistrationForm, ResetPasswordForm, ResetPasswordRequestForm
+from app.forms import ContactForm, LoginForm, QueryEditForm, RegistrationForm, ResetPasswordForm, ResetPasswordRequestForm
 from app.models import User
 from flask import Flask, flash, redirect, render_template, request, url_for
 from flask_login import current_user, login_required, login_user, logout_user
@@ -18,6 +18,26 @@ def home():
 @app.route("/about")
 def about():
   return render_template("about.html")
+
+
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+  form = ContactForm()
+  if request.method == 'POST':
+    if form.validate() == False:
+      flash('All fields are required.')
+      return render_template('contact.html', form=form)
+    else:
+      msg = Message(form.subject.data, sender='contact@example.com', recipients=['your_email@example.com'])
+      msg.body = """  
+        From: %s <%s>  
+        %s  
+        """ % (form.name.data, form.email.data, form.message.data)
+      mail.send(msg)
+      return render_template('contact.html', success=True)
+  elif request.method == 'GET':
+    return render_template('contact.html', form=form)
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
