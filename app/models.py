@@ -8,7 +8,7 @@ import jwt
 
 
 class User(UserMixin, db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, autoincrement=True,primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
@@ -37,7 +37,7 @@ class User(UserMixin, db.Model):
         return User.query.get(id)
 
 class Query(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer primary_key=True)
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     query_terms = db.Column(db.String(240))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
