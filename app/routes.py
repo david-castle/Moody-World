@@ -5,6 +5,7 @@ from app.forms import ContactForm, LoginForm, QueryEditForm, RegistrationForm, R
 from app.models import User
 from flask import Flask, flash, redirect, render_template, request, url_for
 from flask_login import current_user, login_required, login_user, logout_user
+from flask_user
 from werkzeug.urls import url_parse
 
 
@@ -18,7 +19,6 @@ def home():
 @app.route("/about")
 def about():
   return render_template("about.html")
-
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
