@@ -8,10 +8,17 @@ import jwt
 
 
 class User(UserMixin, db.Model):
+
+    __tablename__ = "users"
+
     id = db.Column(db.Integer, autoincrement=True,primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
+    registered_on = db.Column(db.DateTime, nullable=False)
+    admin = db.Column(db.Boolean, nullable=False, default=False)
+    confirmed = db.Column(db.Boolean, nullable=False, default=False)
+    confirmed_on = db.Column(db.DateTime, nullable=True)
 
     def __repr__(self):
         return '<User {}>'.format(self.username)
