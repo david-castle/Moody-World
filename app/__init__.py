@@ -21,11 +21,5 @@ login = LoginManager(app)
 login.login_view = 'login'
 mail = Mail(app)
 
-app.config["MAIL_SERVER"] = "smtp.gmail.com"
-app.config["MAIL_PORT"] = 465
-app.config["MAIL_USE_SSL"] = True
-app.config["MAIL_USERNAME"] = 'contact@example.com'
-app.config["MAIL_PASSWORD"] = 'your-password'
-mail.init_app(app)
 
 from app import routes, models

@@ -8,17 +8,16 @@ import jwt
 
 
 class User(UserMixin, db.Model):
-
-    __tablename__ = "users"
-
     id = db.Column(db.Integer, autoincrement=True,primary_key=True)
+    firstname = db.Column(db.String(120), index=True)
+    lastname = db.Column(db.String(120), index=True)
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
-    registered_on = db.Column(db.DateTime, nullable=False)
-    admin = db.Column(db.Boolean, nullable=False, default=False)
-    confirmed = db.Column(db.Boolean, nullable=False, default=False)
-    confirmed_on = db.Column(db.DateTime, nullable=True)
+    registered_on = db.Column(db.DateTime, default=datetime.now)
+    #admin = db.Column(db.Boolean, nullable=False, default=False)
+    #confirmed = db.Column(db.Boolean, nullable=False, default=False)
+    #onfirmed_on = db.Column(db.DateTime, nullable=True)
 
     def __repr__(self):
         return '<User {}>'.format(self.username)
@@ -43,14 +42,16 @@ class User(UserMixin, db.Model):
             return
         return User.query.get(id)
 
-class Query(db.Model):
-    id = db.Column(db.Integer primary_key=True)
+class PersistentQuery(db.Model):
+    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    query_name = db.Column(db.String(64), index=True, unique=True)
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
-    query_terms = db.Column(db.String(240))
+    searchtermsAny = db.Column(db.String(240))
+    searchtermsAll = db.Column(db.String(240))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
     def __repr__(self):
-        return '<Query {}>'.format(self.body)
+        return '<Query {}>'.format(self.query_name)
 
 @login.user_loader
 def load_user(id):
