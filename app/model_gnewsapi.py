@@ -31,7 +31,7 @@ class GNewsApi():
         language = "&lang=en"
         max_return = "&max=10" #default for free plan is 10
         #from_date = "&from-date=" + str(default_date)
-        apikey = "&apikey=09fc1663f2898e244bd33b4cc76c254c"
+        apikey = "&apikey=GET_AN_API_KEY"
         all_articles = []
         for word in keywords:
             url = base_url + word + language + max_return + apikey
