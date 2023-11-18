@@ -173,19 +173,6 @@ class ProcessingFrame():
                 locationNames.append([ent.text for ent in doc.ents if ent.label_ == "GPE"][0])    
             else:
                 pass      
-        # place_entity = locationtagger.find_locations(text = text)
-        # for i in range(len(place_entity.cities)):
-        #     if len(place_entity.cities) >= 1:
-        #         locationNames['Cities'] = [place_entity.cities[0]]
-        #     else:
-        #         pass
-        # for i in range(len(place_entity.countries)):
-        #     if len(place_entity.countries) > 0:
-        #         for country in place_entity.countries:
-        #             if country in self.countries_list:
-        #                 locationNames['Countries'] = [place_entity.countries[0]] 
-        #             else:
-        #                 pass
         return locationNames
 
     def getCoordinates(self, text):
@@ -201,7 +188,7 @@ class ProcessingFrame():
 
         try:
             #1loc = place[0]
-            url = "https://api.geoapify.com/v1/geocode/search?text=" + place[0] + "&apiKey=43a11a6b22cd4143a539fea67a98e798"
+            url = "https://api.geoapify.com/v1/geocode/search?text=" + place[0] + "&apiKey=GET_AN_API_KEY"
             headers = CaseInsensitiveDict()
             headers["Accept"] = "application/json"
             resp = requests.get(url, headers=headers)
