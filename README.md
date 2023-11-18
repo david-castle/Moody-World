@@ -12,3 +12,7 @@ Once the project is cloned, you also need to install the dependencies. Use the c
 
 
 Additionally, spacy will need the en-core-web-lg language model to do its job, which can be found [here](https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.5.0/en_core_web_lg-3.5.0-py3-none-any.whl).
+<br>
+![IMG_3155](https://github.com/david-castle/Moody-World/assets/114294692/0902058a-3414-4ea3-92f9-d9d468669688)
+<br>
+![IMG_3156](https://github.com/david-castle/Moody-World/assets/114294692/d0a86c9c-0bcc-4f79-a109-3d76c2b1c89c)
