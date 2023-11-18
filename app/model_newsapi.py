@@ -22,7 +22,7 @@ class NewsApi():
         print(term)
         #keywords = self.convertKeyWords(term)
         #print(keywords)
-        newsapi = NewsApiClient(api_key='87edec59c3ba4e03939a5ad21f02c52a')
+        newsapi = NewsApiClient(api_key='GET_AN_API_KEY')
         to_date = date.today()
         from_date = to_date - timedelta(days=28)
         all_articles = newsapi.get_everything(q=str(term),
