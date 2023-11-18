@@ -31,7 +31,7 @@ class NewsDataApi():
         language = "&lang=en"
         max_return = "&max=10" #default for free plan is 10
         #from_date = "&from-date=" + str(default_date)
-        apikey = "apikey=pub_27238b44ca178461c62ff294307456683f97f&q="
+        apikey = "apikey=GET_AN_API_KEY&q="
         for word in keywords:
             url = base_url + apikey + keywords
             with urllib.request.urlopen(url) as response:
