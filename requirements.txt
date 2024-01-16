@@ -17,6 +17,6 @@ Requests==2.31.0
 spacy==3.5.0
 vaderSentiment==3.3.2
 vaderSentiment==3.3.2
-Werkzeug==2.3.6
+Werkzeug>=2.3.8
 WTForms==3.0.1
 WTForms_Components==0.10.5
