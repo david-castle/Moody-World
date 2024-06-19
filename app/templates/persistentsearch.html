@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Twitter{% endblock %}
+{% block title %}Persistent Search{% endblock %}
 {% block content %}
 <div class="form-wrapper">
     <div class="form">
@@ -18,6 +18,17 @@
 
  <form action="" method="post">
 
+    <div class="field">
+        <label for="queryname" class="label">Query Name</label>
+        <div class="control">
+            {{ form.searchtermsAny(autofocus=True, class='input') }}
+        </div>
+        {% for error in form.searchtermsAny.errors %}
+        <p class="help has-background-warning">
+            {{ error }}
+        </p>
+        {% endfor %}
+    </div>
 
     <div class="field">
         <label for="searchtermsAny" class="label">Match Any of These Terms</label>

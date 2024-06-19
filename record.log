@@ -4538,3 +4538,1895 @@ jinja2.exceptions.UndefinedError: 'app.forms.QueryEditForm object' has no attrib
 2023-08-15 16:53:13,346 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:53:13] "GET /static/moody-world.css HTTP/1.1" 200 -
 2023-08-15 16:53:15,452 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:53:15] "GET /contact HTTP/1.1" 200 -
 2023-08-15 16:53:15,458 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [15/Aug/2023 16:53:15] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 12:24:00,059 ERROR flask_migrate MainThread : Error: Directory migrations already exists and is not empty
+2023-08-27 12:27:37,785 ERROR flask_migrate MainThread : Error: Directory migrations already exists and is not empty
+2023-08-27 12:34:23,838 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 12:34:23,839 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 12:34:33,072 INFO app Thread-1 (process_request_thread) : Info level log
+2023-08-27 12:34:33,072 WARNING app Thread-1 (process_request_thread) : Warning level log
+2023-08-27 12:34:33,092 ERROR app Thread-1 (process_request_thread) : Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 16, in home
+    return render_template("home.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/base.html", line 26, in top-level template code
+    <a class="button is-link" href="{{ url_for('query_add_page') }}">Query</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'query_add_page'. Did you mean 'quicksearch_page' instead?
+2023-08-27 12:34:33,096 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:34:33] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2023-08-27 12:34:33,113 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:34:33] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2023-08-27 12:34:33,115 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:34:33] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2023-08-27 12:34:33,123 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:34:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-08-27 12:35:51,784 INFO app Thread-5 (process_request_thread) : Info level log
+2023-08-27 12:35:51,784 WARNING app Thread-5 (process_request_thread) : Warning level log
+2023-08-27 12:35:51,785 ERROR app Thread-5 (process_request_thread) : Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 16, in home
+    return render_template("home.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/base.html", line 26, in top-level template code
+    <a class="button is-link" href="{{ url_for('quicksearch') }}">Quick Search</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'query_add_page'. Did you mean 'quicksearch_page' instead?
+2023-08-27 12:35:51,790 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:35:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2023-08-27 12:35:58,613 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 12:35:58,613 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 12:36:00,886 INFO app Thread-1 (process_request_thread) : Info level log
+2023-08-27 12:36:00,886 WARNING app Thread-1 (process_request_thread) : Warning level log
+2023-08-27 12:36:00,894 ERROR app Thread-1 (process_request_thread) : Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 16, in home
+    return render_template("home.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/base.html", line 26, in top-level template code
+    <a class="button is-link" href="{{ url_for('quicksearch') }}">Quick Search</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'quicksearch'. Did you mean 'quicksearch_page' instead?
+2023-08-27 12:36:00,898 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:36:00] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2023-08-27 12:38:22,282 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 12:38:22,282 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 12:38:28,982 INFO app Thread-1 (process_request_thread) : Info level log
+2023-08-27 12:38:28,982 WARNING app Thread-1 (process_request_thread) : Warning level log
+2023-08-27 12:38:28,999 ERROR app Thread-1 (process_request_thread) : Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 16, in home
+    return render_template("home.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/base.html", line 26, in top-level template code
+    <a class="button is-link" href="{{ url_for('quicksearch') }}">Quick Search</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'quicksearch'. Did you mean 'quicksearch_page' instead?
+2023-08-27 12:38:29,002 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:38:29] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2023-08-27 12:38:34,536 INFO app Thread-2 (process_request_thread) : Info level log
+2023-08-27 12:38:34,536 WARNING app Thread-2 (process_request_thread) : Warning level log
+2023-08-27 12:38:34,537 ERROR app Thread-2 (process_request_thread) : Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 16, in home
+    return render_template("home.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/base.html", line 26, in top-level template code
+    <a class="button is-link" href="{{ url_for('quicksearch') }}">Quick Search</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'quicksearch'. Did you mean 'quicksearch_page' instead?
+2023-08-27 12:38:34,540 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:38:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2023-08-27 12:41:11,385 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 12:41:11,385 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 12:41:34,882 INFO app Thread-1 (process_request_thread) : Info level log
+2023-08-27 12:41:34,882 WARNING app Thread-1 (process_request_thread) : Warning level log
+2023-08-27 12:41:34,903 ERROR app Thread-1 (process_request_thread) : Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 16, in home
+    return render_template("home.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/base.html", line 29, in top-level template code
+    <a class="button is-link" href="{{ url_for('results') }}">Results</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'results'. Did you mean 'quicksearch_results' instead?
+2023-08-27 12:41:34,908 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:41:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2023-08-27 12:42:34,856 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 12:42:34,856 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 12:42:41,333 INFO app Thread-1 (process_request_thread) : Info level log
+2023-08-27 12:42:41,333 WARNING app Thread-1 (process_request_thread) : Warning level log
+2023-08-27 12:42:41,354 ERROR app Thread-1 (process_request_thread) : Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 16, in home
+    return render_template("home.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/base.html", line 29, in top-level template code
+    <a class="button is-link" href="{{ url_for('quicksearch-results') }}">Results</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'quicksearch-results'. Did you mean 'quicksearch_results' instead?
+2023-08-27 12:42:41,358 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:42:41] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2023-08-27 12:43:43,842 INFO app Thread-2 (process_request_thread) : Info level log
+2023-08-27 12:43:43,842 WARNING app Thread-2 (process_request_thread) : Warning level log
+2023-08-27 12:43:43,843 ERROR app Thread-2 (process_request_thread) : Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 16, in home
+    return render_template("home.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/base.html", line 29, in top-level template code
+    <a class="button is-link" href="{{ url_for('quicksearch-results') }}">Results</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'quicksearch-results'. Did you mean 'quicksearch_results' instead?
+2023-08-27 12:43:43,849 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:43:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2023-08-27 12:43:50,767 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 12:43:50,767 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 12:43:59,073 INFO app Thread-1 (process_request_thread) : Info level log
+2023-08-27 12:43:59,073 WARNING app Thread-1 (process_request_thread) : Warning level log
+2023-08-27 12:43:59,093 ERROR app Thread-1 (process_request_thread) : Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 16, in home
+    return render_template("home.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/base.html", line 29, in top-level template code
+    <a class="button is-link" href="{{ url_for('quicksearch-results') }}">Results</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'quicksearch-results'. Did you mean 'quicksearch_results' instead?
+2023-08-27 12:43:59,098 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:43:59] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2023-08-27 12:45:34,076 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 12:45:34,076 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 12:45:38,507 INFO app Thread-1 (process_request_thread) : Info level log
+2023-08-27 12:45:38,507 WARNING app Thread-1 (process_request_thread) : Warning level log
+2023-08-27 12:45:38,524 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:45:38] "GET / HTTP/1.1" 200 -
+2023-08-27 12:45:38,537 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:45:38] "GET /static/moody-world.css HTTP/1.1" 200 -
+2023-08-27 12:45:38,537 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:45:38] "GET /static/pexels-pixabay-41949.jpg HTTP/1.1" 200 -
+2023-08-27 12:48:06,814 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 12:48:06,814 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 12:48:13,029 INFO app Thread-1 (process_request_thread) : Info level log
+2023-08-27 12:48:13,029 WARNING app Thread-1 (process_request_thread) : Warning level log
+2023-08-27 12:48:13,052 ERROR app Thread-1 (process_request_thread) : Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 16, in home
+    return render_template("home.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/base.html", line 32, in top-level template code
+    <a class="button is-link" href="{{ url_for('persistentsearch') }}">Persistent Search</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'persistentsearch'. Did you mean 'persistentSearch_page' instead?
+2023-08-27 12:48:13,060 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:48:13] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2023-08-27 12:49:20,127 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 12:49:20,127 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 12:49:21,702 INFO app Thread-1 (process_request_thread) : Info level log
+2023-08-27 12:49:21,703 WARNING app Thread-1 (process_request_thread) : Warning level log
+2023-08-27 12:49:21,718 ERROR app Thread-1 (process_request_thread) : Exception on / [GET]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 16, in home
+    return render_template("home.html")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/home.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/templates/base.html", line 32, in top-level template code
+    <a class="button is-link" href="{{ url_for('persistentSearch') }}">Persistent Search</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/werkzeug/routing/map.py", line 950, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'persistentSearch'. Did you mean 'persistentSearch_page' instead?
+2023-08-27 12:49:21,720 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:49:21] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2023-08-27 12:50:29,194 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 12:50:29,194 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 12:50:32,097 INFO app Thread-1 (process_request_thread) : Info level log
+2023-08-27 12:50:32,098 WARNING app Thread-1 (process_request_thread) : Warning level log
+2023-08-27 12:50:32,115 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:50:32] "GET / HTTP/1.1" 200 -
+2023-08-27 12:50:32,127 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:50:32] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 12:50:32,131 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:50:32] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-27 12:50:48,005 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:50:48] "GET /login HTTP/1.1" 200 -
+2023-08-27 12:50:48,010 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:50:48] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 12:50:51,004 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:50:51] "GET /registration HTTP/1.1" 200 -
+2023-08-27 12:50:51,012 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:50:51] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 12:51:10,545 ERROR app Thread-8 (process_request_thread) : Exception on /registration [POST]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 70, in register
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask_wtf/form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate(extra_validators=extra_validators)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/form.py", line 329, in validate
+    return super().validate(extra)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/form.py", line 146, in validate
+    if not field.validate(self, extra):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/fields/core.py", line 242, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/fields/core.py", line 262, in _run_validation_chain
+    validator(form, self)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/forms.py", line 59, in validate_username
+    user = User.query.filter_by(username=username.data).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2747, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2846, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2246, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2141, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1412, in execute
+    return meth(
+           ^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 483, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1844, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1984, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.registered_on AS user_registered_on, user.admin AS user_admin, user.confirmed AS user_confirmed, user.confirmed_on AS user_confirmed_on 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('me', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-08-27 12:51:10,559 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:51:10] "[35m[1mPOST /registration HTTP/1.1[0m" 500 -
+2023-08-27 12:54:51,133 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 12:54:51,133 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 12:54:56,019 ERROR app Thread-1 (process_request_thread) : Exception on /registration [POST]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 70, in register
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask_wtf/form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate(extra_validators=extra_validators)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/form.py", line 329, in validate
+    return super().validate(extra)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/form.py", line 146, in validate
+    if not field.validate(self, extra):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/fields/core.py", line 242, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/fields/core.py", line 262, in _run_validation_chain
+    validator(form, self)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/forms.py", line 59, in validate_username
+    user = User.query.filter_by(username=username.data).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2747, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2846, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2246, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2141, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1412, in execute
+    return meth(
+           ^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 483, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1844, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1984, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.registered_on AS user_registered_on, user.admin AS user_admin, user.confirmed AS user_confirmed, user.confirmed_on AS user_confirmed_on 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('me', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-08-27 12:54:56,030 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:54:56] "[35m[1mPOST /registration HTTP/1.1[0m" 500 -
+2023-08-27 12:55:05,740 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:55:05] "GET /registration HTTP/1.1" 200 -
+2023-08-27 12:55:05,754 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:55:05] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 12:55:07,281 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:55:07] "[33mGET /results HTTP/1.1[0m" 404 -
+2023-08-27 12:55:07,555 INFO app Thread-5 (process_request_thread) : Info level log
+2023-08-27 12:55:07,555 WARNING app Thread-5 (process_request_thread) : Warning level log
+2023-08-27 12:55:07,559 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:55:07] "GET / HTTP/1.1" 200 -
+2023-08-27 12:55:07,568 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:55:07] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 12:55:07,568 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:55:07] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-27 12:55:10,953 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:55:10] "GET /login HTTP/1.1" 200 -
+2023-08-27 12:55:10,961 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:55:10] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 12:55:13,194 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:55:13] "GET /registration HTTP/1.1" 200 -
+2023-08-27 12:55:13,201 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:55:13] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 12:55:51,386 ERROR app Thread-12 (process_request_thread) : Exception on /registration [POST]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 70, in register
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask_wtf/form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate(extra_validators=extra_validators)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/form.py", line 329, in validate
+    return super().validate(extra)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/form.py", line 146, in validate
+    if not field.validate(self, extra):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/fields/core.py", line 242, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/fields/core.py", line 262, in _run_validation_chain
+    validator(form, self)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/forms.py", line 59, in validate_username
+    user = User.query.filter_by(username=username.data).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2747, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2846, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2246, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2141, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1412, in execute
+    return meth(
+           ^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 483, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1844, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1984, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.registered_on AS user_registered_on, user.admin AS user_admin, user.confirmed AS user_confirmed, user.confirmed_on AS user_confirmed_on 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('monica', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-08-27 12:55:51,394 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:55:51] "[35m[1mPOST /registration HTTP/1.1[0m" 500 -
+2023-08-27 12:57:39,924 ERROR flask_migrate MainThread : Error: Directory migrations already exists and is not empty
+2023-08-27 12:59:24,813 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 12:59:24,813 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 12:59:29,597 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:59:29] "GET /registration HTTP/1.1" 200 -
+2023-08-27 12:59:29,606 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:59:29] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 12:59:30,813 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:59:30] "[33mGET /results HTTP/1.1[0m" 404 -
+2023-08-27 12:59:31,057 INFO app Thread-4 (process_request_thread) : Info level log
+2023-08-27 12:59:31,057 WARNING app Thread-4 (process_request_thread) : Warning level log
+2023-08-27 12:59:31,065 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:59:31] "GET / HTTP/1.1" 200 -
+2023-08-27 12:59:31,075 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:59:31] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 12:59:31,078 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:59:31] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-27 12:59:32,849 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:59:32] "GET /login HTTP/1.1" 200 -
+2023-08-27 12:59:32,856 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:59:32] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 12:59:35,000 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:59:35] "GET /registration HTTP/1.1" 200 -
+2023-08-27 12:59:35,006 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:59:35] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 12:59:54,674 ERROR app Thread-11 (process_request_thread) : Exception on /registration [POST]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 70, in register
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask_wtf/form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate(extra_validators=extra_validators)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/form.py", line 329, in validate
+    return super().validate(extra)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/form.py", line 146, in validate
+    if not field.validate(self, extra):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/fields/core.py", line 242, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/fields/core.py", line 262, in _run_validation_chain
+    validator(form, self)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/forms.py", line 59, in validate_username
+    user = User.query.filter_by(username=username.data).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2747, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2846, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2246, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2141, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1412, in execute
+    return meth(
+           ^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 483, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1844, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1984, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.registered_on AS user_registered_on, user.admin AS user_admin, user.confirmed AS user_confirmed, user.confirmed_on AS user_confirmed_on 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('monica', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-08-27 12:59:54,686 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 12:59:54] "[35m[1mPOST /registration HTTP/1.1[0m" 500 -
+2023-08-27 13:04:13,915 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 13:04:13,915 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 13:04:16,546 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:04:16] "GET /registration HTTP/1.1" 200 -
+2023-08-27 13:04:16,556 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:04:16] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:04:17,762 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:04:17] "[33mGET /results HTTP/1.1[0m" 404 -
+2023-08-27 13:04:17,920 INFO app Thread-4 (process_request_thread) : Info level log
+2023-08-27 13:04:17,921 WARNING app Thread-4 (process_request_thread) : Warning level log
+2023-08-27 13:04:17,926 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:04:17] "GET / HTTP/1.1" 200 -
+2023-08-27 13:04:17,935 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:04:17] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:04:17,935 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:04:17] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-27 13:04:19,967 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:04:19] "GET /login HTTP/1.1" 200 -
+2023-08-27 13:04:19,974 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:04:19] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:04:22,411 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:04:22] "GET /registration HTTP/1.1" 200 -
+2023-08-27 13:04:22,417 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:04:22] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:04:39,553 ERROR app Thread-11 (process_request_thread) : Exception on /registration [POST]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 70, in register
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask_wtf/form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate(extra_validators=extra_validators)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/form.py", line 329, in validate
+    return super().validate(extra)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/form.py", line 146, in validate
+    if not field.validate(self, extra):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/fields/core.py", line 242, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/fields/core.py", line 262, in _run_validation_chain
+    validator(form, self)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/forms.py", line 59, in validate_username
+    user = User.query.filter_by(username=username.data).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2747, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2846, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2246, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2141, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1412, in execute
+    return meth(
+           ^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 483, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1844, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1984, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.registered_on AS user_registered_on 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('monica', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-08-27 13:04:39,564 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:04:39] "[35m[1mPOST /registration HTTP/1.1[0m" 500 -
+2023-08-27 13:07:37,925 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 13:07:37,925 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 13:07:39,611 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:07:39] "GET /registration HTTP/1.1" 200 -
+2023-08-27 13:07:39,622 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:07:39] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:07:40,753 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:07:40] "[33mGET /results HTTP/1.1[0m" 404 -
+2023-08-27 13:07:41,155 INFO app Thread-4 (process_request_thread) : Info level log
+2023-08-27 13:07:41,156 WARNING app Thread-4 (process_request_thread) : Warning level log
+2023-08-27 13:07:41,161 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:07:41] "GET / HTTP/1.1" 200 -
+2023-08-27 13:07:41,172 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:07:41] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-27 13:07:41,173 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:07:41] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:07:43,183 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:07:43] "GET /login HTTP/1.1" 200 -
+2023-08-27 13:07:43,190 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:07:43] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:07:44,498 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:07:44] "GET /registration HTTP/1.1" 200 -
+2023-08-27 13:07:44,504 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:07:44] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:08:05,561 ERROR app Thread-11 (process_request_thread) : Exception on /registration [POST]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 70, in register
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask_wtf/form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate(extra_validators=extra_validators)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/form.py", line 329, in validate
+    return super().validate(extra)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/form.py", line 146, in validate
+    if not field.validate(self, extra):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/fields/core.py", line 242, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/fields/core.py", line 262, in _run_validation_chain
+    validator(form, self)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/forms.py", line 59, in validate_username
+    user = User.query.filter_by(username=username.data).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2747, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2846, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2246, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2141, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1412, in execute
+    return meth(
+           ^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 483, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1844, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1984, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.registered_on AS user_registered_on 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('monica', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-08-27 13:08:05,574 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:08:05] "[35m[1mPOST /registration HTTP/1.1[0m" 500 -
+2023-08-27 13:09:25,348 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 13:09:25,348 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 13:09:28,561 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:09:28] "GET /registration HTTP/1.1" 200 -
+2023-08-27 13:09:28,568 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:09:28] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:09:29,695 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:09:29] "[33mGET /results HTTP/1.1[0m" 404 -
+2023-08-27 13:09:29,992 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:09:29] "[33mGET /re HTTP/1.1[0m" 404 -
+2023-08-27 13:09:33,190 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:09:33] "[33mGET /results HTTP/1.1[0m" 404 -
+2023-08-27 13:09:33,311 INFO app Thread-6 (process_request_thread) : Info level log
+2023-08-27 13:09:33,312 WARNING app Thread-6 (process_request_thread) : Warning level log
+2023-08-27 13:09:33,315 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:09:33] "GET / HTTP/1.1" 200 -
+2023-08-27 13:09:33,322 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:09:33] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:09:33,323 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:09:33] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-27 13:09:35,132 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:09:35] "GET /login HTTP/1.1" 200 -
+2023-08-27 13:09:35,140 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:09:35] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:09:37,243 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:09:37] "GET /registration HTTP/1.1" 200 -
+2023-08-27 13:09:37,250 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:09:37] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:09:57,747 ERROR app Thread-13 (process_request_thread) : Exception on /registration [POST]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 70, in register
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask_wtf/form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate(extra_validators=extra_validators)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/form.py", line 329, in validate
+    return super().validate(extra)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/form.py", line 146, in validate
+    if not field.validate(self, extra):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/fields/core.py", line 242, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/wtforms/fields/core.py", line 262, in _run_validation_chain
+    validator(form, self)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/forms.py", line 59, in validate_username
+    user = User.query.filter_by(username=username.data).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2747, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2846, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2246, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2141, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1412, in execute
+    return meth(
+           ^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 483, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1844, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1984, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.registered_on AS user_registered_on 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('monica', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-08-27 13:09:57,761 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:09:57] "[35m[1mPOST /registration HTTP/1.1[0m" 500 -
+2023-08-27 13:12:15,228 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 13:12:15,228 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 13:12:17,588 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:12:17] "GET /registration HTTP/1.1" 200 -
+2023-08-27 13:12:17,595 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:12:17] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:12:18,803 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:12:18] "[33mGET /results HTTP/1.1[0m" 404 -
+2023-08-27 13:12:19,263 INFO app Thread-4 (process_request_thread) : Info level log
+2023-08-27 13:12:19,263 WARNING app Thread-4 (process_request_thread) : Warning level log
+2023-08-27 13:12:19,269 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:12:19] "GET / HTTP/1.1" 200 -
+2023-08-27 13:12:19,278 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:12:19] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:12:19,280 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:12:19] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-27 13:12:22,539 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:12:22] "GET /login HTTP/1.1" 200 -
+2023-08-27 13:12:22,547 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:12:22] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:12:28,061 ERROR app Thread-9 (process_request_thread) : Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 47, in login
+    user = User.query.filter_by(username=form.username.data).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2747, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2846, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2246, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2141, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1412, in execute
+    return meth(
+           ^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 483, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1844, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1984, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.registered_on AS user_registered_on 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('david', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2023-08-27 13:12:28,071 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:12:28] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2023-08-27 13:18:40,906 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 13:18:40,906 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 13:18:45,319 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:18:45] "GET /login HTTP/1.1" 200 -
+2023-08-27 13:18:45,327 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:18:45] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:18:45,910 INFO app Thread-3 (process_request_thread) : Info level log
+2023-08-27 13:18:45,910 WARNING app Thread-3 (process_request_thread) : Warning level log
+2023-08-27 13:18:45,914 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:18:45] "GET / HTTP/1.1" 200 -
+2023-08-27 13:18:45,923 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:18:45] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:18:45,924 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:18:45] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-27 13:18:48,160 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:18:48] "GET /login HTTP/1.1" 200 -
+2023-08-27 13:18:48,171 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:18:48] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:18:49,722 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:18:49] "GET /registration HTTP/1.1" 200 -
+2023-08-27 13:18:49,730 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:18:49] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:19:16,013 ERROR app Thread-10 (process_request_thread) : Exception on /registration [POST]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 71, in register
+    user = User(id=int(datetime.now().strftime('%m%d%H%M%S%f')),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/state.py", line 566, in _initialize_instance
+    with util.safe_reraise():
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/state.py", line 564, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/decl_base.py", line 2134, in _declarative_constructor
+    raise TypeError(
+TypeError: 'confirmed' is an invalid keyword argument for User
+2023-08-27 13:19:16,019 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:19:16] "[35m[1mPOST /registration HTTP/1.1[0m" 500 -
+2023-08-27 13:20:56,524 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 13:20:56,525 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 13:20:58,032 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:20:58] "GET /registration HTTP/1.1" 200 -
+2023-08-27 13:20:58,042 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:20:58] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:20:59,244 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:20:59] "[33mGET /results HTTP/1.1[0m" 404 -
+2023-08-27 13:20:59,499 INFO app Thread-4 (process_request_thread) : Info level log
+2023-08-27 13:20:59,500 WARNING app Thread-4 (process_request_thread) : Warning level log
+2023-08-27 13:20:59,503 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:20:59] "GET / HTTP/1.1" 200 -
+2023-08-27 13:20:59,510 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:20:59] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:20:59,511 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:20:59] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-27 13:21:01,641 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:21:01] "GET /login HTTP/1.1" 200 -
+2023-08-27 13:21:01,649 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:21:01] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:21:02,877 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:21:02] "GET /registration HTTP/1.1" 200 -
+2023-08-27 13:21:02,887 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:21:02] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:21:28,518 ERROR app Thread-11 (process_request_thread) : Exception on /registration [POST]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 71, in register
+    user = User(id=int(datetime.now().strftime('%m%d%H%M%S%f')),
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 4, in __init__
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/state.py", line 566, in _initialize_instance
+    with util.safe_reraise():
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/state.py", line 564, in _initialize_instance
+    manager.original_init(*mixed[1:], **kwargs)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/decl_base.py", line 2134, in _declarative_constructor
+    raise TypeError(
+TypeError: 'confirmed' is an invalid keyword argument for User
+2023-08-27 13:21:28,523 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:21:28] "[35m[1mPOST /registration HTTP/1.1[0m" 500 -
+2023-08-27 13:22:00,608 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 13:22:00,608 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 13:22:02,540 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:22:02] "GET /registration HTTP/1.1" 200 -
+2023-08-27 13:22:02,547 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:22:02] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:22:04,076 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:22:04] "[33mGET /results HTTP/1.1[0m" 404 -
+2023-08-27 13:22:04,093 INFO app Thread-4 (process_request_thread) : Info level log
+2023-08-27 13:22:04,093 WARNING app Thread-4 (process_request_thread) : Warning level log
+2023-08-27 13:22:04,096 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:22:04] "GET / HTTP/1.1" 200 -
+2023-08-27 13:22:04,102 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:22:04] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:22:04,103 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:22:04] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-27 13:22:06,381 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:22:06] "GET /login HTTP/1.1" 200 -
+2023-08-27 13:22:06,390 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:22:06] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:22:07,757 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:22:07] "GET /registration HTTP/1.1" 200 -
+2023-08-27 13:22:07,768 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:22:07] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:22:27,268 ERROR app Thread-11 (process_request_thread) : Exception on /registration [POST]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 77, in register
+    user.registered_on(datetime.now())
+TypeError: 'NoneType' object is not callable
+2023-08-27 13:22:27,269 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:22:27] "[35m[1mPOST /registration HTTP/1.1[0m" 500 -
+2023-08-27 13:27:28,051 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 13:27:28,051 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 13:27:33,317 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:27:33] "GET /registration HTTP/1.1" 200 -
+2023-08-27 13:27:33,328 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:27:33] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:27:34,532 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:27:34] "[33mGET /results HTTP/1.1[0m" 404 -
+2023-08-27 13:27:34,908 INFO app Thread-4 (process_request_thread) : Info level log
+2023-08-27 13:27:34,908 WARNING app Thread-4 (process_request_thread) : Warning level log
+2023-08-27 13:27:34,915 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:27:34] "GET / HTTP/1.1" 200 -
+2023-08-27 13:27:34,925 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:27:34] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:27:34,928 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:27:34] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-27 13:27:37,318 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:27:37] "GET /login HTTP/1.1" 200 -
+2023-08-27 13:27:37,326 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:27:37] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:27:40,627 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:27:40] "GET /registration HTTP/1.1" 200 -
+2023-08-27 13:27:40,632 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:27:40] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:28:00,388 ERROR app Thread-11 (process_request_thread) : Exception on /registration [POST]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 76, in register
+    user.registered_on(datetime.now().strftime('%m%d%H%M%S%f'))
+TypeError: 'NoneType' object is not callable
+2023-08-27 13:28:00,390 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:28:00] "[35m[1mPOST /registration HTTP/1.1[0m" 500 -
+2023-08-27 13:28:55,173 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 13:28:55,173 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 13:29:03,184 INFO flask_wtf.csrf Thread-1 (process_request_thread) : The CSRF token is invalid.
+2023-08-27 13:29:03,198 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:29:03] "POST /registration HTTP/1.1" 200 -
+2023-08-27 13:29:03,208 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:29:03] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:29:09,353 ERROR app Thread-3 (process_request_thread) : Exception on /registration [POST]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 77, in register
+    user.registered_on(registered)
+TypeError: 'NoneType' object is not callable
+2023-08-27 13:29:09,355 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:29:09] "[35m[1mPOST /registration HTTP/1.1[0m" 500 -
+2023-08-27 13:30:20,123 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 13:30:20,123 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 13:30:26,268 INFO flask_wtf.csrf Thread-1 (process_request_thread) : The CSRF token is invalid.
+2023-08-27 13:30:26,284 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:30:26] "POST /registration HTTP/1.1" 200 -
+2023-08-27 13:30:26,294 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:30:26] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:30:30,849 ERROR app Thread-3 (process_request_thread) : Exception on /registration [POST]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: NOT NULL constraint failed: user.registered_on
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 77, in register
+    db.session.commit()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 552, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1920, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1236, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1211, in _prepare_impl
+    self.session.flush()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4163, in flush
+    self._flush(objects)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4298, in _flush
+    with util.safe_reraise():
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4259, in _flush
+    flush_context.execute()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 1226, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1412, in execute
+    return meth(
+           ^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 483, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1844, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1984, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1965, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 921, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) NOT NULL constraint failed: user.registered_on
+[SQL: INSERT INTO user (firstname, lastname, username, email, password_hash, registered_on) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: ('David', 'Castle', 'David', 'test@test.com', 'pbkdf2:sha256:600000$eUD4RV4FK3xvwH2E$62d88debe2f237eaeb769a3e4b190b8507ee2331a9decbdc9d0694e6f2c5852d', None)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2023-08-27 13:30:30,855 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:30:30] "[35m[1mPOST /registration HTTP/1.1[0m" 500 -
+2023-08-27 13:38:50,412 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 13:38:50,412 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 13:38:53,592 INFO flask_wtf.csrf Thread-1 (process_request_thread) : The CSRF token is invalid.
+2023-08-27 13:38:53,605 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:38:53] "POST /registration HTTP/1.1" 200 -
+2023-08-27 13:38:59,369 ERROR app Thread-2 (process_request_thread) : Exception on /registration [POST]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1810, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1445, in _init_compiled
+    l_param: List[Any] = [
+                         ^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1446, in <listcomp>
+    flattened_processors[key](compiled_params[key])
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/dialects/sqlite/base.py", line 1067, in process
+    raise TypeError(
+TypeError: SQLite DateTime type only accepts Python datetime and date objects as input.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 78, in register
+    db.session.commit()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 552, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1920, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1236, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1211, in _prepare_impl
+    self.session.flush()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4163, in flush
+    self._flush(objects)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4298, in _flush
+    with util.safe_reraise():
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4259, in _flush
+    flush_context.execute()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 1226, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1412, in execute
+    return meth(
+           ^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 483, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1816, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1810, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1445, in _init_compiled
+    l_param: List[Any] = [
+                         ^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1446, in <listcomp>
+    flattened_processors[key](compiled_params[key])
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/dialects/sqlite/base.py", line 1067, in process
+    raise TypeError(
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO user (firstname, lastname, username, email, password_hash, registered_on) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: [{'email': 'test@test.com', 'password_hash': 'pbkdf2:sha256:600000$ERQdaewdvyim4sxl$f07deb054a95059ee62b6bf0eeaf4364a4bf145b8d76d072513f9d7fdb364677', 'firstname': 'David', 'username': 'David', 'lastname': 'Castle', 'registered_on': '20230808/27/23130859'}]]
+2023-08-27 13:38:59,378 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:38:59] "[35m[1mPOST /registration HTTP/1.1[0m" 500 -
+2023-08-27 13:40:12,000 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 13:40:12,000 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 13:40:15,634 INFO flask_wtf.csrf Thread-1 (process_request_thread) : The CSRF token is invalid.
+2023-08-27 13:40:15,647 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:40:15] "POST /registration HTTP/1.1" 200 -
+2023-08-27 13:40:22,054 ERROR app Thread-2 (process_request_thread) : Exception on /registration [POST]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1810, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1445, in _init_compiled
+    l_param: List[Any] = [
+                         ^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1446, in <listcomp>
+    flattened_processors[key](compiled_params[key])
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/dialects/sqlite/base.py", line 1067, in process
+    raise TypeError(
+TypeError: SQLite DateTime type only accepts Python datetime and date objects as input.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 78, in register
+    db.session.commit()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 552, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1920, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1236, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1211, in _prepare_impl
+    self.session.flush()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4163, in flush
+    self._flush(objects)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4298, in _flush
+    with util.safe_reraise():
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4259, in _flush
+    flush_context.execute()
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 1226, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1412, in execute
+    return meth(
+           ^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 483, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1635, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1816, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2339, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1810, in _execute_context
+    context = constructor(
+              ^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1445, in _init_compiled
+    l_param: List[Any] = [
+                         ^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 1446, in <listcomp>
+    flattened_processors[key](compiled_params[key])
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/sqlalchemy/dialects/sqlite/base.py", line 1067, in process
+    raise TypeError(
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO user (firstname, lastname, username, email, password_hash, registered_on) VALUES (?, ?, ?, ?, ?, ?)]
+[parameters: [{'password_hash': 'pbkdf2:sha256:600000$8e8Svs3dITZjI1Hp$f531a4b6745ee84fd9c41f3437bf6bac39a4cdc54f3dae58b06cd073d830267f', 'username': 'David', 'firstname': 'David', 'lastname': 'Castle', 'registered_on': '2023,08,08/27/23,13,08,21', 'email': 'test@test.com'}]]
+2023-08-27 13:40:22,061 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:40:22] "[35m[1mPOST /registration HTTP/1.1[0m" 500 -
+2023-08-27 13:42:44,249 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 13:42:44,249 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 13:42:46,881 INFO flask_wtf.csrf Thread-1 (process_request_thread) : The CSRF token is invalid.
+2023-08-27 13:42:46,896 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:42:46] "POST /registration HTTP/1.1" 200 -
+2023-08-27 13:42:46,906 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:42:46] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:42:51,296 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:42:51] "[32mPOST /registration HTTP/1.1[0m" 302 -
+2023-08-27 13:42:51,307 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:42:51] "GET /login HTTP/1.1" 200 -
+2023-08-27 13:42:51,311 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:42:51] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:42:56,749 INFO app Thread-6 (process_request_thread) : David logged in successfully
+2023-08-27 13:42:56,750 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:42:56] "[32mPOST /login HTTP/1.1[0m" 302 -
+2023-08-27 13:42:56,759 INFO app Thread-7 (process_request_thread) : Info level log
+2023-08-27 13:42:56,759 WARNING app Thread-7 (process_request_thread) : Warning level log
+2023-08-27 13:42:56,761 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:42:56] "GET /home HTTP/1.1" 200 -
+2023-08-27 13:42:56,766 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:42:56] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 13:42:56,766 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:42:56] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-27 13:49:59,275 ERROR app Thread-10 (process_request_thread) : Exception on /persistentsearch [GET]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/app/routes.py", line 121, in persistentSearch
+    return render_template("persistentsearch.html", form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Documents/workspace/Moody-World/moody-env/lib/python3.11/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: persistentsearch.html
+2023-08-27 13:49:59,285 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:49:59] "[35m[1mGET /persistentsearch HTTP/1.1[0m" 500 -
+2023-08-27 13:51:49,750 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:51:49] "GET /persistentsearch HTTP/1.1" 200 -
+2023-08-27 13:51:49,759 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 13:51:49] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 14:25:30,764 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 14:25:30,764 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 14:25:33,232 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:25:33] "[32mGET /persistentsearch HTTP/1.1[0m" 302 -
+2023-08-27 14:25:33,261 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:25:33] "GET /login?next=/persistentsearch HTTP/1.1" 200 -
+2023-08-27 14:25:33,270 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:25:33] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 14:25:57,633 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:25:57] "[32mPOST /login?next=/persistentsearch HTTP/1.1[0m" 302 -
+2023-08-27 14:25:57,647 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:25:57] "GET /persistentsearch HTTP/1.1" 200 -
+2023-08-27 14:25:57,651 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:25:57] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 14:26:08,714 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:26:08] "[31m[1mPOST /persistentsearch HTTP/1.1[0m" 405 -
+2023-08-27 14:27:41,376 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 14:27:41,376 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 14:27:42,504 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:27:42] "[31m[1mPOST /persistentsearch HTTP/1.1[0m" 405 -
+2023-08-27 14:27:48,150 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:27:48] "[32mGET /persistentsearch HTTP/1.1[0m" 302 -
+2023-08-27 14:27:48,179 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:27:48] "GET /login?next=/persistentsearch HTTP/1.1" 200 -
+2023-08-27 14:27:48,190 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:27:48] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 14:27:53,691 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:27:53] "[32mPOST /login?next=/persistentsearch HTTP/1.1[0m" 302 -
+2023-08-27 14:27:53,703 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:27:53] "GET /persistentsearch HTTP/1.1" 200 -
+2023-08-27 14:27:53,707 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:27:53] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 14:28:00,561 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:28:00] "[31m[1mPOST /persistentsearch HTTP/1.1[0m" 405 -
+2023-08-27 14:29:27,509 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 14:29:27,509 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 14:29:28,480 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:29:28] "[31m[1mPOST /persistentsearch HTTP/1.1[0m" 405 -
+2023-08-27 14:29:31,336 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:29:31] "[32mGET /persistentsearch HTTP/1.1[0m" 302 -
+2023-08-27 14:29:31,365 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:29:31] "GET /login?next=/persistentsearch HTTP/1.1" 200 -
+2023-08-27 14:29:31,375 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:29:31] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 14:29:36,689 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:29:36] "[32mPOST /login?next=/persistentsearch HTTP/1.1[0m" 302 -
+2023-08-27 14:29:36,704 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:29:36] "GET /persistentsearch HTTP/1.1" 200 -
+2023-08-27 14:29:36,708 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:29:36] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 14:29:41,181 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:29:41] "[31m[1mPOST /persistentsearch HTTP/1.1[0m" 405 -
+2023-08-27 14:31:59,415 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 14:31:59,415 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 14:32:00,395 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:32:00] "[32mGET /persistentsearch HTTP/1.1[0m" 302 -
+2023-08-27 14:32:00,426 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:32:00] "GET /login?next=/persistentsearch HTTP/1.1" 200 -
+2023-08-27 14:32:00,435 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:32:00] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 14:32:06,142 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:32:06] "[32mPOST /login?next=/persistentsearch HTTP/1.1[0m" 302 -
+2023-08-27 14:32:06,153 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:32:06] "GET /persistentsearch HTTP/1.1" 200 -
+2023-08-27 14:32:06,157 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:32:06] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 14:32:11,238 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:32:11] "[31m[1mPOST /persistentsearch HTTP/1.1[0m" 405 -
+2023-08-27 14:35:25,538 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 14:35:25,538 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 14:35:27,197 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:35:27] "[32mGET /persistentsearch HTTP/1.1[0m" 302 -
+2023-08-27 14:35:27,220 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:35:27] "GET /login?next=/persistentsearch HTTP/1.1" 200 -
+2023-08-27 14:35:32,319 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:35:32] "[32mPOST /login?next=/persistentsearch HTTP/1.1[0m" 302 -
+2023-08-27 14:35:32,329 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:35:32] "GET /persistentsearch HTTP/1.1" 200 -
+2023-08-27 14:35:32,336 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:35:32] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 14:35:35,371 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:35:35] "[31m[1mPOST /persistentsearch HTTP/1.1[0m" 405 -
+2023-08-27 14:42:37,610 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-08-27 14:42:37,610 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+2023-08-27 14:42:41,779 INFO werkzeug Thread-1 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:42:41] "[32mGET /persistent_results HTTP/1.1[0m" 302 -
+2023-08-27 14:42:41,809 INFO werkzeug Thread-2 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:42:41] "GET /login?next=/persistent_results HTTP/1.1" 200 -
+2023-08-27 14:42:41,818 INFO werkzeug Thread-3 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:42:41] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 14:42:45,910 INFO app Thread-4 (process_request_thread) : David failed to log in
+2023-08-27 14:42:45,911 INFO werkzeug Thread-4 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:42:45] "[32mPOST /login?next=/persistent_results HTTP/1.1[0m" 302 -
+2023-08-27 14:42:45,922 INFO werkzeug Thread-5 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:42:45] "GET /login HTTP/1.1" 200 -
+2023-08-27 14:42:45,929 INFO werkzeug Thread-6 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:42:45] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 14:42:48,912 INFO werkzeug Thread-7 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:42:48] "GET /registration HTTP/1.1" 200 -
+2023-08-27 14:42:48,918 INFO werkzeug Thread-8 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:42:48] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 14:43:04,179 INFO werkzeug Thread-9 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:43:04] "[32mPOST /registration HTTP/1.1[0m" 302 -
+2023-08-27 14:43:04,189 INFO werkzeug Thread-10 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:43:04] "GET /login HTTP/1.1" 200 -
+2023-08-27 14:43:04,195 INFO werkzeug Thread-11 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:43:04] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 14:43:06,112 INFO werkzeug Thread-12 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:43:06] "POST /login HTTP/1.1" 200 -
+2023-08-27 14:43:06,120 INFO werkzeug Thread-13 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:43:06] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 14:43:11,056 INFO app Thread-14 (process_request_thread) : me logged in successfully
+2023-08-27 14:43:11,056 INFO werkzeug Thread-14 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:43:11] "[32mPOST /login HTTP/1.1[0m" 302 -
+2023-08-27 14:43:11,065 INFO app Thread-15 (process_request_thread) : Info level log
+2023-08-27 14:43:11,065 WARNING app Thread-15 (process_request_thread) : Warning level log
+2023-08-27 14:43:11,069 INFO werkzeug Thread-15 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:43:11] "GET /home HTTP/1.1" 200 -
+2023-08-27 14:43:11,074 INFO werkzeug Thread-17 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:43:11] "[36mGET /static/pexels-pixabay-41949.jpg HTTP/1.1[0m" 304 -
+2023-08-27 14:43:11,074 INFO werkzeug Thread-16 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:43:11] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 14:43:12,691 INFO werkzeug Thread-18 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:43:12] "GET /persistentsearch HTTP/1.1" 200 -
+2023-08-27 14:43:12,699 INFO werkzeug Thread-19 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:43:12] "[36mGET /static/moody-world.css HTTP/1.1[0m" 304 -
+2023-08-27 14:43:19,284 INFO werkzeug Thread-20 (process_request_thread) : 127.0.0.1 - - [27/Aug/2023 14:43:19] "[31m[1mPOST /persistentsearch HTTP/1.1[0m" 405 -
