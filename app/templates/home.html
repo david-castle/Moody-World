@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h2 class="title">Moody World</h2>
+                <img src="{{ url_for('static', filename='pexels-pixabay-41949.jpg')}}" alt="Map">
+                <p class="subtitle">{{ date_time }}</p>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

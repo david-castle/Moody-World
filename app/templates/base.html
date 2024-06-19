@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moody World - {% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href=""/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='moody-world.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Source+Serif+4:opsz@8..60&display=swap" rel="stylesheet"></head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>Moody World</h1>
+      <div style="flex-grow: 1"></div>
+      <nav class="navbar" aria-label="main-navigation">
+
+        <div class="navbar-brand">
+          <span class="navbar-item">
+            <a class="button is-link" href="{{ url_for('home') }}">Home</a>
+          </span>
+          <span class="navbar-item">
+            <a class="button is-link" href="{{ url_for('about') }}">About</a>
+          </span>
+          <span class="navbar-item">
+            <a class="button is-link" href="{{ url_for('query_add_page') }}">Query</a>
+          </span>
+          <span class="navbar-item">
+            <a class="button is-link" href="{{ url_for('results') }}">Results</a>
+          </span>
+          <span class="navbar-item">
+            <a class="button is-link" href="{{ url_for('contact') }}">Contact Us</a>
+          </span>
+          <span class="navbar-item">
+            {% if current_user.is_anonymous %}
+            <a class="button is-link" href="{{ url_for('login') }}">Login</a>
+            {% else %}
+            <a class="button is-link" href="{{ url_for('logout') }}">Logout</a>
+            {% endif %}
+          </span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="content">
+        {% block content %}{% endblock %}
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="content">
+      <small>
+          {% if current_user.is_anonymous %}
+            You are currently logged Out
+          {% else %}
+            You are currently logged in as: {{ current_user.username}}
+          {% endif %}
+      | &copy; 2023, David Castle</small>
+    </div>
+  </footer>
+</body>
+</html>
