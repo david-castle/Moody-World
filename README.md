@@ -11,7 +11,7 @@ Get started by cloning the project repository from GitHub.
 Once the project is cloned, you also need to install the dependencies. Use the command "pip install -r requirements.txt" from the root folder of the project.
 
 
-Additionally, spacy will need the en-core-web-lg language model to do its job, which can be found [here](https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.5.0/en_core_web_lg-3.5.0-py3-none-any.whl).
+Additionally, spacy will need the en-core-web-lg and en-core-web-sm language models to do its job, which can be found [here](https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.5.0/en_core_web_lg-3.5.0-py3-none-any.whl).
 <br>
 ![IMG_3155](https://github.com/david-castle/Moody-World/assets/114294692/0902058a-3414-4ea3-92f9-d9d468669688)
 <br>

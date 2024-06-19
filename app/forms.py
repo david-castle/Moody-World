@@ -18,21 +18,8 @@ class LoginForm(FlaskForm):
     remember_me = BooleanField('Remember Me')
     submit = SubmitField('Sign In')
 
-class QuickSearchForm(FlaskForm):
-    searchtermsAny = StringField("Match Any of These Terms")#, validators=[DataRequired()])
-    searchtermsAll = StringField("Match All of These Terms")#, validators=[DataRequired()])
-    
-    def validate(self, extra_validators=None):
-        if super().validate(extra_validators):
-            if not (self.searchtermsAny.data or self.searchtermsAll.data):
-                self.searchtermsAny.errors.append('At least one field must have a value')
-                return False
-            else:
-                return True
-        return False
-
-class PersistentSearchForm(FlaskForm):
-    name = StringField("Query Name", validators=[DataRequired()])
+class QueryEditForm(FlaskForm):
+    #name = StringField("Query Name", validators=[DataRequired()])
     searchtermsAny = StringField("Match Any of These Terms")#, validators=[DataRequired()])
     searchtermsAll = StringField("Match All of These Terms")#, validators=[DataRequired()])
     

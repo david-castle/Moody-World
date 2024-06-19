@@ -1,0 +1,111 @@
+2024-06-16 03:36:12,923 INFO app MainThread : MoodyWorld startup
+2024-06-16 03:38:19,938 INFO app MainThread : MoodyWorld startup
+2024-06-16 03:38:24,120 INFO app Thread-1 (process_request_thread) : Info level log
+2024-06-16 03:38:24,121 WARNING app Thread-1 (process_request_thread) : Warning level log
+2024-06-16 03:40:38,381 INFO app MainThread : MoodyWorld startup [in /home/myname/Workspace/Moody-World/app/__init__.py:44]
+2024-06-16 03:40:47,870 INFO app Thread-1 (process_request_thread) : Info level log [in /home/myname/Workspace/Moody-World/app/routes.py:14]
+2024-06-16 03:40:47,870 WARNING app Thread-1 (process_request_thread) : Warning level log [in /home/myname/Workspace/Moody-World/app/routes.py:15]
+2024-06-16 06:00:19,406 INFO app MainThread : MoodyWorld startup [in /home/myname/Workspace/Moody-World/app/__init__.py:44]
+2024-06-16 06:10:56,242 INFO app MainThread : MoodyWorld startup [in /home/myname/Workspace/Moody-World/app/__init__.py:44]
+2024-06-16 06:11:10,911 INFO app Thread-1 (process_request_thread) : Info level log [in /home/myname/Workspace/Moody-World/app/routes.py:14]
+2024-06-16 06:11:10,912 WARNING app Thread-1 (process_request_thread) : Warning level log [in /home/myname/Workspace/Moody-World/app/routes.py:15]
+2024-06-16 06:11:26,868 INFO app Thread-10 (process_request_thread) : admin logged in successfully [in /home/myname/Workspace/Moody-World/app/routes.py:55]
+2024-06-16 06:11:26,875 INFO app Thread-11 (process_request_thread) : Info level log [in /home/myname/Workspace/Moody-World/app/routes.py:14]
+2024-06-16 06:11:26,876 WARNING app Thread-11 (process_request_thread) : Warning level log [in /home/myname/Workspace/Moody-World/app/routes.py:15]
+2024-06-16 06:32:26,098 INFO app MainThread : MoodyWorld startup [in /home/myname/Workspace/Moody-World/app/__init__.py:44]
+2024-06-16 06:32:33,102 INFO app Thread-1 (process_request_thread) : Info level log [in /home/myname/Workspace/Moody-World/app/routes.py:14]
+2024-06-16 06:32:33,103 WARNING app Thread-1 (process_request_thread) : Warning level log [in /home/myname/Workspace/Moody-World/app/routes.py:15]
+2024-06-16 06:32:40,893 INFO app Thread-9 (process_request_thread) : admin logged in successfully [in /home/myname/Workspace/Moody-World/app/routes.py:55]
+2024-06-16 06:32:40,901 INFO app Thread-10 (process_request_thread) : Info level log [in /home/myname/Workspace/Moody-World/app/routes.py:14]
+2024-06-16 06:32:40,901 WARNING app Thread-10 (process_request_thread) : Warning level log [in /home/myname/Workspace/Moody-World/app/routes.py:15]
+2024-06-16 07:21:08,694 INFO app MainThread : MoodyWorld startup [in /home/myname/Workspace/Moody-World/app/__init__.py:44]
+2024-06-16 07:21:29,969 INFO app Thread-1 (process_request_thread) : Info level log [in /home/myname/Workspace/Moody-World/app/routes.py:14]
+2024-06-16 07:21:29,969 WARNING app Thread-1 (process_request_thread) : Warning level log [in /home/myname/Workspace/Moody-World/app/routes.py:15]
+2024-06-16 07:21:37,461 INFO app Thread-7 (process_request_thread) : admin logged in successfully [in /home/myname/Workspace/Moody-World/app/routes.py:55]
+2024-06-16 07:21:37,465 INFO app Thread-8 (process_request_thread) : Info level log [in /home/myname/Workspace/Moody-World/app/routes.py:14]
+2024-06-16 07:21:37,465 WARNING app Thread-8 (process_request_thread) : Warning level log [in /home/myname/Workspace/Moody-World/app/routes.py:15]
+2024-06-16 07:22:06,964 ERROR app Thread-14 (process_request_thread) : Exception on /query [POST] [in /home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.ProgrammingError: Error binding parameter 1: type 'builtin_function_or_method' is not supported
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/myname/Workspace/Moody-World/app/routes.py", line 104, in query_add_page
+    user_id = User.query.get(id),
+              ^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/sqlalchemy/util/deprecations.py", line 386, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 1127, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 1136, in _get_impl
+    return self.session._get_impl(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 3862, in _get_impl
+    return db_load_fn(
+           ^^^^^^^^^^^
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/sqlalchemy/orm/loading.py", line 694, in load_on_pk_identity
+    session.execute(
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2351, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2236, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2353, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/myname/Workspace/Moody-World/moody/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (sqlite3.ProgrammingError) Error binding parameter 1: type 'builtin_function_or_method' is not supported
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash 
+FROM user 
+WHERE user.id = ?]
+[parameters: (<built-in function id>,)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-06-18 07:26:08,520 INFO app MainThread : MoodyWorld startup [in /home/myname/Workspace/Moody-World/app/__init__.py:44]
+2024-06-18 07:26:35,164 INFO app Thread-1 (process_request_thread) : Info level log [in /home/myname/Workspace/Moody-World/app/routes.py:14]
+2024-06-18 07:26:35,165 WARNING app Thread-1 (process_request_thread) : Warning level log [in /home/myname/Workspace/Moody-World/app/routes.py:15]
+2024-06-18 07:26:44,216 INFO app Thread-7 (process_request_thread) : admin logged in successfully [in /home/myname/Workspace/Moody-World/app/routes.py:55]
+2024-06-18 07:26:44,222 INFO app Thread-8 (process_request_thread) : Info level log [in /home/myname/Workspace/Moody-World/app/routes.py:14]
+2024-06-18 07:26:44,223 WARNING app Thread-8 (process_request_thread) : Warning level log [in /home/myname/Workspace/Moody-World/app/routes.py:15]

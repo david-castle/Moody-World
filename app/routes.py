@@ -1,11 +1,11 @@
 from datetime import datetime
-from app import app, db, model_call, mail
+from app import app, db, login, model_call, mail
 from app.email import send_password_reset_email
-from app.forms import ContactForm, LoginForm, PersistentSearchForm, QuickSearchForm, RegistrationForm, ResetPasswordForm, ResetPasswordRequestForm
-from app.models import PersistentQuery, User
-from flask import Flask, flash, redirect, render_template, request, url_for
-from flask_login import current_user, login_required, login_user, logout_user
-from werkzeug.urls import url_parse
+from app.forms import ContactForm, LoginForm, QueryEditForm, RegistrationForm, ResetPasswordForm, ResetPasswordRequestForm
+from app.models import Query, User
+from flask import Flask, flash, redirect, render_template, request, session, url_for
+from flask_login import current_user, LoginManager, login_required, login_user, logout_user
+from urllib.parse import urlparse
 
 
 @app.route("/")
@@ -51,7 +51,7 @@ def login():
             return redirect(url_for("login"))
         login_user(user, remember=form.remember_me.data)
         next_page = request.args.get('next')
-        if not next_page or url_parse(next_page).netloc != '':
+        if not next_page or urlparse(next_page).netloc != '':
             app.logger.info('%s logged in successfully', form.username.data)
             next_page = url_for('home')
         return redirect(next_page)
@@ -68,10 +68,8 @@ def register():
         return redirect(url_for('/'))
     form = RegistrationForm()
     if form.validate_on_submit():
-        user = User(firstname=form.firstname.data, 
-                    lastname=form.lastname.data, 
-                    username=form.username.data, 
-                    email=form.email.data)
+        user = User(username=form.username.data, email=form.email.data, 
+                    firstname=form.firstname.data, lastname=form.lastname.data)
         user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()
@@ -79,10 +77,17 @@ def register():
         return redirect(url_for('login'))
     return render_template('registration.html', title='Registration', form=form)
 
-@app.route("/quicksearch", methods=["GET", "POST"])
+
+@app.route("/results", methods=["GET", "POST"])
 @login_required
-def quicksearch():
-    form = QuickSearchForm()
+def results():
+    return render_template("results.html")
+
+
+@app.route("/query", methods=["GET", "POST"])
+@login_required
+def query_add_page():
+    form = QueryEditForm()
     if request.method == 'POST':
         file_y = open('temp/AnySearchterms.txt', 'w')
         file_l = open('temp/AllSearchterms.txt', 'w')
@@ -92,8 +97,18 @@ def quicksearch():
         file_y.close()
         file_l.write(sal)
         file_l.close()
+        if len(san) > len(sal):
+            terms = san
+        else:
+            terms = sal
+        query = Query(id = int(datetime.now().strftime('%m%d%H%M%S%f')), 
+                      user_id = User.get_id(self), 
+                      timestamp = int(datetime.now().strftime('%Y-%m-%d %H:%M:%S%f')),
+                      query_terms = terms)
+        db.session.add(query)
+        db.session.commit()
         return redirect(url_for("processing"))
-    return render_template("quicksearch.html", form=form)
+    return render_template("query.html", form=form)
 
 @app.route("/processing", methods=["GET", "POST"])
 @login_required
@@ -107,30 +122,10 @@ def processing():
         m.modelCall()
         return "Done" 
 
-@app.route("/quicksearch_results", methods=["GET", "POST"])
+@app.route("/query-results", methods=["GET", "POST"])
 @login_required
-def quicksearch_results():
-    return render_template("qicksearch_results.html")
-
-@app.route("/persistentsearch")
-@login_required
-def persistentSearch():
-    form = PersistentSearchForm()
-    if form.validate_on_submit():
-        query = PersistentQuery(query_name=form.query_name.data, 
-                                searchtermsAny=form.searchtermsAny.data,
-                                searchtermsAll=form.searchtermsAll.data)
-        db.session.add(query)
-        db.session.commit()
-        flash(f"Congratulations, you submitted {form.query_name.data} for processing!")
-        return redirect(url_for("processing"))
-    return render_template("persistentsearch.html", form=form)
-
-@app.route("/persistent_results", methods=["GET", "POST"])
-@login_required
-def persistentSearch_results():
-  return render_template("persistent_results.html")
-
+def query_results():
+    return render_template("results.html")
 
 @app.route('/reset_password_request', methods=['GET', 'POST'])
 def reset_password_request():
@@ -160,3 +155,4 @@ def reset_password(token):
         flash('Your password has been reset.')
         return redirect(url_for('home'))
     return render_template('reset_password.html', form=form)
+

@@ -24,12 +24,15 @@ from requests.structures import CaseInsensitiveDict
 class ProcessingFrame():
     gc = geonamescache.GeonamesCache()
     nlp = spacy.load("en_core_web_lg")
-    nltk.downloader.download('maxent_ne_chunker')
-    nltk.downloader.download('words')
-    nltk.downloader.download('treebank')
-    nltk.downloader.download('maxent_treebank_pos_tagger')
-    nltk.downloader.download('punkt')
-    nltk.download('averaged_perceptron_tagger')
+    if os.path.exists('/home/myname/nltk_data'):
+        pass
+    else:
+        nltk.downloader.download('maxent_ne_chunker')
+        nltk.downloader.download('words')
+        nltk.downloader.download('treebank')
+        nltk.downloader.download('maxent_treebank_pos_tagger')
+        nltk.downloader.download('punkt')
+        nltk.download('averaged_perceptron_tagger')
     frame = pd.DataFrame()
 
     countries_list = ['Afghanistan', 'Aland Islands', 'Albania', 'Algeria', 'American Samoa', 
@@ -188,7 +191,7 @@ class ProcessingFrame():
 
         try:
             #1loc = place[0]
-            url = "https://api.geoapify.com/v1/geocode/search?text=" + place[0] + "&apiKey=GET_AN_API_KEY"
+            url = "https://api.geoapify.com/v1/geocode/search?text=" + place[0] + "&apiKey=43a11a6b22cd4143a539fea67a98e798"
             headers = CaseInsensitiveDict()
             headers["Accept"] = "application/json"
             resp = requests.get(url, headers=headers)
