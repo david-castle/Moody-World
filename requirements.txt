@@ -7,7 +7,7 @@ flask_migrate>=4.0.4
 flask_sqlalchemy>=3.0.5
 Flask_WTF>=1.1.1
 geonamescache>=2.0.0
-gunicorn>=22.0.0
+gunicorn
 locationtagger>=0.0.1
 lxml_html_clean>=0.1.1
 newsapi_python>=0.2.7
