@@ -1,0 +1,101 @@
+2024-06-22 07:10:21,127 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:45]
+2024-06-22 07:12:06,800 INFO app Thread-1 (process_request_thread) : Info level log [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:14]
+2024-06-22 07:12:06,800 WARNING app Thread-1 (process_request_thread) : Warning level log [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:15]
+2024-06-22 07:12:25,140 ERROR app Thread-9 (process_request_thread) : Exception on /login [POST] [in /Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py", line 47, in login
+    user = User.query.filter_by(username=form.username.data).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2728, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/orm/query.py", line 2827, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2351, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2236, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2353, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.firstname AS user_firstname, user.lastname AS user_lastname, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.authenticated AS user_authenticated 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('admin', 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-06-22 07:20:40,824 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:45]
+2024-06-22 07:24:49,551 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:45]
+2024-06-22 07:25:35,901 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:45]
+2024-06-22 07:26:34,323 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:45]
+2024-06-22 07:30:11,556 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:45]
+2024-06-22 07:34:59,573 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:45]
+2024-06-22 07:35:09,661 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:45]
+2024-06-22 07:35:20,068 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:45]
+2024-06-22 09:04:01,479 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:45]
+2024-06-22 09:04:10,564 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:45]
+2024-06-22 11:43:58,421 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:46]
+2024-06-22 11:44:48,812 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:46]
+2024-06-22 11:45:18,615 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:46]
+2024-06-22 11:45:28,502 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:46]
+2024-06-22 11:51:39,192 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:46]
+2024-06-22 11:55:46,194 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:46]
+2024-06-22 11:55:56,202 INFO app Thread-1 (process_request_thread) : Info level log [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:19]
+2024-06-22 11:55:56,202 WARNING app Thread-1 (process_request_thread) : Warning level log [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:20]
+2024-06-22 12:00:21,161 INFO app Thread-19 (process_request_thread) : jennjenn logged in successfully [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:60]
+2024-06-22 12:00:21,174 INFO app Thread-20 (process_request_thread) : Info level log [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:19]
+2024-06-22 12:00:21,174 WARNING app Thread-20 (process_request_thread) : Warning level log [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:20]
+2024-06-22 12:02:43,033 INFO app Thread-38 (process_request_thread) : Info level log [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:19]
+2024-06-22 12:02:43,033 WARNING app Thread-38 (process_request_thread) : Warning level log [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:20]
+2024-06-22 12:02:50,878 INFO app Thread-43 (process_request_thread) : admin logged in successfully [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:60]
+2024-06-22 12:02:50,888 INFO app Thread-44 (process_request_thread) : Info level log [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:19]
+2024-06-22 12:02:50,888 WARNING app Thread-44 (process_request_thread) : Warning level log [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:20]
+2024-06-22 12:08:19,172 INFO app Thread-72 (process_request_thread) : Info level log [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:19]
+2024-06-22 12:08:19,173 WARNING app Thread-72 (process_request_thread) : Warning level log [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:20]
+2024-06-22 12:10:58,528 INFO app Thread-77 (process_request_thread) : jennjenn logged in successfully [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:60]
+2024-06-22 12:10:58,538 INFO app Thread-78 (process_request_thread) : Info level log [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:19]

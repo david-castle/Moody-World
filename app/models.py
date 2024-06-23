@@ -8,22 +8,26 @@ import jwt
 
 
 class User(UserMixin, db.Model):
-
-    __tablename__ = 'user'
-
     id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     firstname = db.Column(db.String(120), index=True, unique=True)
     lastname = db.Column(db.String(120), index=True, unique=True)
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
-    authenticated = db.Column(db.Boolean, default=False)
+    last_seen = db.Column(db.DateTime, default=datetime.now())
 
     def __repr__(self):
-        return '<User {}>'.format(self.username)
+        return str(self.id)
+        #return '{}'.format(int(self.id))
     
+    def is_authenticated(self):
+        return True
+        
     def is_active(self):
         return True
+    
+    def is_anonymous(self):
+        return False
         
     def get_id(self):
         return str(self.id)
@@ -47,6 +51,13 @@ class User(UserMixin, db.Model):
         except:
             return
         return User.query.get(id)
+    
+    def run_queries(self):
+        return Query.query.join(
+            User, (User.id == Query.user_id).order_by(
+                Query.timestamp.desc()
+            )
+        )
 
 class Query(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -55,11 +66,11 @@ class Query(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
     def __repr__(self):
-        return '<Query {}>'.format(self.body)
+        return '<Query {}>'.format(self.query_terms)
 
 class StoredResults(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    allStoredResults = db.Column(db.Integer, db.ForeignKey('query.id'))
+    query_id = db.Column(db.Integer, db.ForeignKey('query.id'))
     source = db.Column(db.String(240))
     author = db.Column(db.String(240))
     title = db.Column(db.String(480))
@@ -78,7 +89,10 @@ class StoredResults(db.Model):
     FrequentWords = db.Column(db.String(480))
     Colors = db.Column(db.String(120))
     Ranking = db.Column(db.Integer)
+    
+    def __repr__(self):
+        return '<Results {}>'.format(self.query_terms)
 
 @login.user_loader
 def user_loader(id):
-    return User.query.get(id)
+    return User.query.get(int(id))

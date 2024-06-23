@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>User: {{ user.username }}</h1>
+    {% if user.last_seen %}<h3>Last seen on: {{ user.last_seen }}</h3>{% endif %} 
+    <hr>
+    {% for query in queries %}
+    <p>
+    On {{ query.time }} you searched: <b> {{ query.body }}</b>
+    </p>
+    {% endfor %}
+{% endblock %}

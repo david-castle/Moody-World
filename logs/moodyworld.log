@@ -83,3 +83,4 @@ WHERE user.username = ?
  LIMIT ? OFFSET ?]
 [parameters: ('admin', 1, 0)]
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-06-22 07:06:19,063 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:44]

@@ -1,0 +1,105 @@
+2024-06-22 12:10:58,538 WARNING app Thread-78 (process_request_thread) : Warning level log [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:20]
+2024-06-22 12:11:40,645 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:46]
+2024-06-22 12:12:18,525 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:46]
+2024-06-22 12:12:32,195 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:46]
+2024-06-22 12:13:16,856 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:46]
+2024-06-22 12:14:15,164 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:46]
+2024-06-22 12:14:24,855 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:46]
+2024-06-22 12:14:35,458 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:46]
+2024-06-22 12:14:41,622 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:46]
+2024-06-22 12:14:48,689 INFO app Thread-7 (process_request_thread) : admin failed to log in [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:53]
+2024-06-22 12:15:18,089 INFO app Thread-15 (process_request_thread) : admin logged in successfully [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:58]
+2024-06-22 12:15:23,629 ERROR app Thread-22 (process_request_thread) : Exception on /query [POST] [in /Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.ProgrammingError: Error binding parameter 4: type 'LocalProxy' is not supported
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py", line 112, in query_add_page
+    db.session.commit()
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/orm/scoping.py", line 597, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2017, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1302, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1277, in _prepare_impl
+    self.session.flush()
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4341, in flush
+    self._flush(objects)
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4476, in _flush
+    with util.safe_reraise():
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4437, in _flush
+    flush_context.execute()
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1048, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2353, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: <exception str() failed>
+2024-06-22 12:17:52,327 INFO app Thread-35 (process_request_thread) : admin logged in successfully [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:58]
+2024-06-22 12:19:37,428 INFO app Thread-46 (process_request_thread) : admin logged in successfully [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:58]
+2024-06-22 12:21:23,440 INFO app Thread-58 (process_request_thread) : admin logged in successfully [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:58]
+2024-06-22 12:23:39,797 INFO app Thread-70 (process_request_thread) : admin logged in successfully [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:58]
+2024-06-22 12:24:26,598 INFO app Thread-82 (process_request_thread) : admin logged in successfully [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:58]
+2024-06-22 12:25:20,878 INFO app Thread-94 (process_request_thread) : admin logged in successfully [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:58]
+2024-06-22 12:26:06,099 INFO app Thread-106 (process_request_thread) : admin logged in successfully [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:58]
+2024-06-22 12:27:42,102 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:46]
+2024-06-22 12:27:53,219 INFO app Thread-9 (process_request_thread) : admin logged in successfully [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:58]
+2024-06-22 12:27:56,254 INFO app Thread-13 (process_request_thread) : Current user is: 1 [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:95]
+2024-06-22 12:28:11,727 INFO app Thread-16 (process_request_thread) : Current user is: 1 [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:95]

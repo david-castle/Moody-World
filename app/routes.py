@@ -7,12 +7,15 @@ from flask import Flask, flash, redirect, render_template, request, session, url
 from flask_login import current_user, LoginManager, login_required, login_user, logout_user
 from urllib.parse import urlparse
 
+@app.before_request
+def before_request():
+    if current_user.is_authenticated:
+        current_user.last_seen = datetime.now()
+        db.session.commit()
 
 @app.route("/")
 @app.route("/home")
 def home():
-    app.logger.info('Info level log')
-    app.logger.warning('Warning level log')
     return render_template("home.html")
 
 @app.route("/about")
@@ -41,7 +44,7 @@ def contact():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for("/"))
+        return redirect(url_for("home"))
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -88,6 +91,9 @@ def results():
 @login_required
 def query_add_page():
     form = QueryEditForm()
+    print("current_user is", current_user)
+    user = session.get("_user_id")
+    print("User is: ", user)
     if request.method == 'POST':
         file_y = open('temp/AnySearchterms.txt', 'w')
         file_l = open('temp/AllSearchterms.txt', 'w')
@@ -101,10 +107,11 @@ def query_add_page():
             terms = san
         else:
             terms = sal
+        user = session.get("_user_id")
         query = Query(id = int(datetime.now().strftime('%m%d%H%M%S%f')), 
-                      user_id = User.get_id(self), 
-                      timestamp = int(datetime.now().strftime('%Y-%m-%d %H:%M:%S%f')),
-                      query_terms = terms)
+                    timestamp = datetime.now(),
+                    query_terms = terms,
+                    user_id = user)
         db.session.add(query)
         db.session.commit()
         return redirect(url_for("processing"))
@@ -156,3 +163,22 @@ def reset_password(token):
         return redirect(url_for('home'))
     return render_template('reset_password.html', form=form)
 
+@app.route('/user/<username>')
+@login_required
+def user(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    u = session.get("_user_id")
+    #queries = [
+    #    {'time': 'time1', 'body': 'Test query #1'},
+    #    {'time': 'time2', 'body': 'Test query #2'}
+    #]
+    queries = []
+    get_queries = Query.query.all()
+    for query in get_queries:
+        if int(query.user_id) == int(u):
+            queries.append({'time': query.timestamp.strftime("%Y-%m-%d %H:%M:%S"), 'body': query.query_terms})
+    print(queries)
+    #for query in queries:
+    #    results.append({'time': query.timestamp, 'body': query.query_terms})
+    return render_template('user.html', user=user, queries=queries)
+    
