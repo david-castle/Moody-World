@@ -1,0 +1,7 @@
+runtime: python310
+
+handlers:
+- url: /.*
+  script: flask run
+
+service: applied-pager-401319
