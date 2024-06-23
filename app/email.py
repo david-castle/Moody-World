@@ -1,4 +1,4 @@
-from app import app, mail
+""" from app import app, mail
 from flask import render_template
 from flask_mail import Message
 from threading import Thread
@@ -21,4 +21,4 @@ def send_password_reset_email(user):
                text_body=render_template('email/reset_password.txt', 
                                          user=user, token=token),
                html_body=render_template('email/reset_password.html', 
-                                         user=user, token=token))
+                                         user=user, token=token)) """
