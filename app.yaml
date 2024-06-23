@@ -4,4 +4,4 @@ handlers:
 - url: /.*
   script: flask run
 
-service: applied-pager-401319
+service: hypnotic-seat-427317-a1@applied-pager-401319.appspot.gserviceaccount.com
