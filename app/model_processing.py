@@ -24,7 +24,7 @@ from requests.structures import CaseInsensitiveDict
 class ProcessingFrame():
     gc = geonamescache.GeonamesCache()
     nlp = spacy.load("en_core_web_lg")
-    if os.path.exists('/home/myname/nltk_data'):
+    """if os.path.exists('/home/myname/nltk_data'):
         pass
     else:
         nltk.downloader.download('maxent_ne_chunker')
@@ -32,7 +32,7 @@ class ProcessingFrame():
         nltk.downloader.download('treebank')
         nltk.downloader.download('maxent_treebank_pos_tagger')
         nltk.downloader.download('punkt')
-        nltk.download('averaged_perceptron_tagger')
+        nltk.download('averaged_perceptron_tagger')"""
     frame = pd.DataFrame()
 
     countries_list = ['Afghanistan', 'Aland Islands', 'Albania', 'Algeria', 'American Samoa', 
