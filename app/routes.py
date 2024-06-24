@@ -168,17 +168,11 @@ def reset_password(token):
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()
     u = session.get("_user_id")
-    #queries = [
-    #    {'time': 'time1', 'body': 'Test query #1'},
-    #    {'time': 'time2', 'body': 'Test query #2'}
-    #]
     queries = []
     get_queries = Query.query.all()
     for query in get_queries:
         if int(query.user_id) == int(u):
             queries.append({'time': query.timestamp.strftime("%Y-%m-%d %H:%M:%S"), 'body': query.query_terms})
     print(queries)
-    #for query in queries:
-    #    results.append({'time': query.timestamp, 'body': query.query_terms})
     return render_template('user.html', user=user, queries=queries)
     

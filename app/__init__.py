@@ -9,7 +9,6 @@ from logging.handlers import TimedRotatingFileHandler, SMTPHandler
 import logging
 import os
 
-#logging.basicConfig(filename='record.log', level=logging.DEBUG, format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 app = Flask(__name__)
 
 SECRET_KEY = os.urandom(32)
@@ -36,12 +35,14 @@ if not app.debug:
     # Logging to local logs
     if not os.path.exists('logs'):
         os.mkdir('logs')
-    file_handler = TimedRotatingFileHandler(f'logs/moodyworld_{datetime.now().strftime("%Y%m%d")}.log', when='midnight', backupCount=10)
-    file_handler.setFormatter(logging.Formatter(
-        '%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s [in %(pathname)s:%(lineno)d]'
-    ))
-    file_handler.setLevel(logging.INFO)
-    app.logger.addHandler(file_handler)
+    logging.basicConfig(filename=f'logs/moodyworld_{datetime.now().strftime("%Y%m%d")}.log', level=logging.INFO, format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
+    logger = logging.getLogger()
+    #file_handler = TimedRotatingFileHandler(f'logs/moodyworld_{datetime.now().strftime("%Y%m%d")}.log', when='midnight', backupCount=10)
+    #file_handler.setFormatter(logging.Formatter(
+    #    '%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s [in %(pathname)s:%(lineno)d]'
+    #))
+    #file_handler.setLevel(logging.INFO)
+    #app.logger.addHandler(file_handler)
     app.logger.setLevel(logging.INFO)
     app.logger.info("MoodyWorld startup")
     
