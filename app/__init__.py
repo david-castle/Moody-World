@@ -5,7 +5,7 @@ from flask_login import LoginManager
 from flask_mail import Mail, Message
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
-from logging.handlers import RotatingFileHandler, SMTPHandler
+from logging.handlers import TimedRotatingFileHandler, SMTPHandler
 import logging
 import os
 
@@ -36,7 +36,7 @@ if not app.debug:
     # Logging to local logs
     if not os.path.exists('logs'):
         os.mkdir('logs')
-    file_handler = RotatingFileHandler(f'logs/moodyworld_{datetime.now().strftime("%Y%m%d")}.log', backupCount=10, maxBytes=10240)
+    file_handler = TimedRotatingFileHandler(f'logs/moodyworld_{datetime.now().strftime("%Y%m%d")}.log', when='midnight', backupCount=10)
     file_handler.setFormatter(logging.Formatter(
         '%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s [in %(pathname)s:%(lineno)d]'
     ))

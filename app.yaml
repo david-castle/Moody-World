@@ -1,7 +1,0 @@
-runtime: python310
-
-handlers:
-- url: /.*
-  script: flask run
-
-service: hypnotic-seat-427317-a1@applied-pager-401319.appspot.gserviceaccount.com
