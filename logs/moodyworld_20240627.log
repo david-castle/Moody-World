@@ -1,0 +1,45 @@
+2024-06-27 18:00:08,834 ERROR app Thread-7 (process_request_thread) : Exception on /query [POST] [in /Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py", line 98, in query_add_page
+    file_y = open('temp/AnySearchterms.txt', 'w')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'temp/AnySearchterms.txt'
+2024-06-27 18:03:13,032 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:46]
+2024-06-27 18:03:31,417 ERROR app Thread-7 (process_request_thread) : Exception on /query [POST] [in /Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py:838]
+Traceback (most recent call last):
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py", line 98, in query_add_page
+    file_y = open('./temp/AnySearchterms.txt', 'w')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './temp/AnySearchterms.txt'
+2024-06-27 18:13:29,425 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:46]
+2024-06-27 18:13:38,106 INFO app Thread-8 (process_request_thread) : admin logged in successfully [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/routes.py:58]
