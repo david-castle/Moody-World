@@ -24,15 +24,15 @@ from requests.structures import CaseInsensitiveDict
 class ProcessingFrame():
     gc = geonamescache.GeonamesCache()
     nlp = spacy.load("en_core_web_lg")
-    if os.path.exists('/home/davidcastle/Workspace/MoodyWorld/Moody-World/nltk_data'):
-        pass
-    else:
-        nltk.downloader.download('maxent_ne_chunker')
-        nltk.downloader.download('words')
-        nltk.downloader.download('treebank')
-        nltk.downloader.download('maxent_treebank_pos_tagger')
-        nltk.downloader.download('punkt')
-        nltk.download('averaged_perceptron_tagger')
+    #if os.path.exists('/home/davidcastle/nltk_data'):
+    #    pass
+    #else:
+    #   nltk.downloader.download('maxent_ne_chunker')
+    #    nltk.downloader.download('words')
+    #    nltk.downloader.download('treebank')
+    #    nltk.downloader.download('maxent_treebank_pos_tagger')
+    #    nltk.downloader.download('punkt')
+    #    nltk.download('averaged_perceptron_tagger')
     frame = pd.DataFrame()
 
     countries_list = ['Afghanistan', 'Aland Islands', 'Albania', 'Algeria', 'American Samoa', 
