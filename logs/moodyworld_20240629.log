@@ -60,3 +60,4 @@ Traceback (most recent call last):
   File "/Users/davidcastle/Workspace/MoodyWorld/moody/lib/python3.12/site-packages/werkzeug/routing/map.py", line 924, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'login' instead?
+2024-06-29 10:26:54,627 INFO app MainThread : MoodyWorld startup [in /Users/davidcastle/Workspace/MoodyWorld/Moody-World/app/__init__.py:46]

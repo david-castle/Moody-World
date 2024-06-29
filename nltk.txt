@@ -1,0 +1,6 @@
+maxent_ne_chunker
+words
+treebank
+maxent_treebank_pos_tagger
+punkt
+averaged_perceptron_tagger
