@@ -36,7 +36,7 @@ if not app.debug:
     # Logging to local logs
     if not os.path.exists('logs'):
         os.mkdir('logs')
-    file_handler = RotatingFileHandler(f'logs/moodyworld_{datetime.now().strftime('%Y%m%d')}.log', backupCount=10, maxBytes=10240)
+    file_handler = RotatingFileHandler(f'logs/moodyworld_{datetime.now().strftime("%Y%m%d")}.log', backupCount=10, maxBytes=10240)
     file_handler.setFormatter(logging.Formatter(
         '%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s [in %(pathname)s:%(lineno)d]'
     ))
@@ -44,8 +44,8 @@ if not app.debug:
     app.logger.addHandler(file_handler)
     app.logger.setLevel(logging.INFO)
     app.logger.info("MoodyWorld startup")
-    
-    # Send logging email 
+
+    # Send logging email
     """ if app.config['MAIL_SERVER']:
         auth = None
         if app.config['MAIL_USERNAME'] or app.config['MAIL_PASSWORD']:
